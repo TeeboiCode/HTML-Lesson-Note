@@ -1,0 +1,1974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML for Beginners – Complete Lesson Notes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <div class="badge">Beginner</div>
+        <h2>HTML Complete<br />Lesson Notes</h2>
+      </div>
+
+      <div class="nav-section">Chapters</div>
+      <a class="nav-link" href="#intro"
+        ><span class="nav-num">01</span> Course Introduction</a
+      >
+      <a class="nav-link" href="#structure"
+        ><span class="nav-num">02</span> HTML Page Structure</a
+      >
+      <a class="nav-link" href="#elements"
+        ><span class="nav-num">03</span> Elements, Tags & Attributes</a
+      >
+      <a class="nav-link" href="#meta"
+        ><span class="nav-num">04</span> Meta Tags</a
+      >
+      <a class="nav-link" href="#text"
+        ><span class="nav-num">05</span> Paragraphs & Headings</a
+      >
+      <a class="nav-link" href="#semantic"
+        ><span class="nav-num">06</span> Semantic Elements</a
+      >
+      <a class="nav-link" href="#lists"
+        ><span class="nav-num">07</span> HTML Lists</a
+      >
+      <a class="nav-link" href="#images"
+        ><span class="nav-num">08</span> HTML Images</a
+      >
+      <a class="nav-link" href="#tables"
+        ><span class="nav-num">09</span> HTML Tables</a
+      >
+      <a class="nav-link" href="#forms"
+        ><span class="nav-num">10</span> HTML Forms</a
+      >
+      <a class="nav-link" href="#media"
+        ><span class="nav-num">11</span> Video & Audio</a
+      >
+    </nav>
+
+    <!-- Main -->
+    <main id="main">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-eyebrow">Complete Lesson Notes</div>
+        <h1>Learn <span>HTML</span><br />From Scratch</h1>
+        <p>
+          A thorough, structured course for absolute beginners. Each chapter
+          includes explanations, code examples, exercises, and an assessment.
+        </p>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">Chapters</span>
+            <span class="meta-value">11</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Level</span>
+            <span class="meta-value">Beginner</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Exercises</span>
+            <span class="meta-value">22</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Assessments</span>
+            <span class="meta-value">11</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════
+       LESSON 1 — COURSE INTRODUCTION
+  ══════════════════════════════ -->
+      <section class="lesson" id="intro">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 01</div>
+          <div class="lesson-title-group">
+            <h2>Course Introduction</h2>
+            <span class="subtitle">What is HTML and why does it matter?</span>
+          </div>
+        </div>
+
+        <h3>What is HTML?</h3>
+        <p>
+          <strong>HTML</strong> stands for
+          <strong>HyperText Markup Language</strong>. It is the foundational
+          language of the web. Every webpage you have ever visited — from Google
+          to YouTube to Wikipedia — is built with HTML at its core.
+        </p>
+        <p>
+          HTML is <em>not</em> a programming language. It is a
+          <strong>markup language</strong>, meaning it describes the
+          <em>structure</em> and <em>meaning</em> of content. Think of HTML as
+          the skeleton of a webpage, CSS as the skin and clothing, and
+          JavaScript as the muscles that make it move.
+        </p>
+
+        <h3>A Brief History</h3>
+        <p>
+          HTML was created by <strong>Tim Berners-Lee</strong> in 1991. Since
+          then it has evolved through several versions — HTML 2.0, HTML 4.01,
+          XHTML — and the current living standard is <strong>HTML5</strong>,
+          maintained by the
+          <abbr title="Web Hypertext Application Technology Working Group"
+            >WHATWG</abbr
+          >.
+        </p>
+
+        <h3>How the Web Works</h3>
+        <p>When you type a URL into your browser:</p>
+        <ol>
+          <li>
+            Your browser sends a request to a <strong>web server</strong>.
+          </li>
+          <li>The server responds with an HTML file.</li>
+          <li>
+            The browser reads (parses) the HTML and displays it as a page.
+          </li>
+        </ol>
+
+        <div class="info-box info-note">
+          <span class="icon">💡</span>
+          <div class="content">
+            <strong>Good to know</strong>
+            <p>
+              You don't need an internet connection to practice HTML. You can
+              create .html files on your computer and open them directly in your
+              browser!
+            </p>
+          </div>
+        </div>
+
+        <h3>Tools You Need</h3>
+        <p>To write HTML, all you need is:</p>
+        <ul>
+          <li>
+            <strong>A text editor</strong> — VS Code (recommended), Notepad++,
+            Sublime Text, or even plain Notepad.
+          </li>
+          <li>
+            <strong>A web browser</strong> — Chrome, Firefox, Edge, or Safari.
+          </li>
+        </ul>
+
+        <h3>Your First HTML File</h3>
+        <p>
+          Create a file called <code>index.html</code> and write the following:
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text-node">My First Page</span><span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="text-node">Hello, World!</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+        <p>
+          Save the file and open it in your browser. You should see "Hello,
+          World!" displayed!
+        </p>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 1.1</div>
+          <h5>Set Up Your Workspace</h5>
+          <p>Get your development environment ready:</p>
+          <ol>
+            <li>
+              Download and install <strong>Visual Studio Code</strong> from
+              code.visualstudio.com
+            </li>
+            <li>
+              Create a folder on your desktop called
+              <strong>html-course</strong>
+            </li>
+            <li>
+              Open VS Code, click "Open Folder", and open your
+              <em>html-course</em> folder
+            </li>
+            <li>Create a new file called <strong>lesson1.html</strong></li>
+            <li>Type (do not copy-paste!) the "Hello, World!" example above</li>
+            <li>
+              Open the file in your browser and confirm you see the output
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 1.2</div>
+          <h5>Personalise Your Page</h5>
+          <p>Edit your <strong>lesson1.html</strong> file:</p>
+          <ol>
+            <li>
+              Change the <code>&lt;title&gt;</code> to your own name followed by
+              "— My Website"
+            </li>
+            <li>Change the body text to introduce yourself in one sentence</li>
+            <li>
+              Observe how changing the <code>&lt;title&gt;</code> affects the
+              browser tab label
+            </li>
+            <li>Save and refresh the browser to see your changes</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 1</div>
+          <h5>Chapter 1 Knowledge Check</h5>
+          <p>Answer the following questions in your own words:</p>
+          <ol>
+            <li>What does HTML stand for, and what does each word mean?</li>
+            <li>Is HTML a programming language? Explain why or why not.</li>
+            <li>
+              Name the three technologies that make up a webpage and describe
+              the role of each.
+            </li>
+            <li>Who invented HTML and in what year?</li>
+            <li>What two tools do you need to write and view HTML?</li>
+            <li>
+              <strong>Practical:</strong> Create an HTML file that displays the
+              text <em>"I am learning HTML!"</em> in the browser and set the tab
+              title to "My HTML Journey".
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 2 — STRUCTURE
+  ══════════════════════════════ -->
+      <section class="lesson" id="structure">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 02</div>
+          <div class="lesson-title-group">
+            <h2>Structure of an HTML Page</h2>
+            <span class="subtitle">Anatomy of every HTML document</span>
+          </div>
+        </div>
+
+        <h3>The Boilerplate</h3>
+        <p>
+          Every HTML page follows a standard structure called the
+          <strong>boilerplate</strong>. Here is the full structure with
+          explanations:
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- 1. DOCTYPE declaration --&gt;</span>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+
+<span class="comment">&lt;!-- 2. Root element --&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang</span>=<span class="val">"en"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- 3. Head section (invisible to user) --&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta <span class="attr">charset</span>=<span class="val">"UTF-8"</span>&gt;</span>
+    <span class="tag">&lt;meta <span class="attr">name</span>=<span class="val">"viewport"</span> <span class="attr">content</span>=<span class="val">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text-node">Page Title</span><span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+
+  <span class="comment">&lt;!-- 4. Body section (visible to user) --&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="text-node">All visible content goes here</span>
+  <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span></code></pre>
+
+        <h3>Breaking It Down</h3>
+
+        <h4>1. DOCTYPE Declaration</h4>
+        <p>
+          <code>&lt;!DOCTYPE html&gt;</code> — This tells the browser that this
+          document is HTML5. It must be the <em>very first line</em> of every
+          HTML file. It is not a tag; it is a declaration.
+        </p>
+
+        <h4>2. The &lt;html&gt; Element</h4>
+        <p>
+          This is the <strong>root element</strong> — all other elements are
+          nested inside it. The <code>lang="en"</code> attribute tells browsers
+          and screen readers what language the page is in.
+        </p>
+
+        <h4>3. The &lt;head&gt; Element</h4>
+        <p>
+          The <code>&lt;head&gt;</code> section contains
+          <strong>metadata</strong> — information about the document that is NOT
+          displayed on screen. This includes the page title, character encoding,
+          viewport settings, and links to CSS stylesheets.
+        </p>
+
+        <h4>4. The &lt;body&gt; Element</h4>
+        <p>
+          The <code>&lt;body&gt;</code> section contains everything
+          <strong>visible on the page</strong> — text, images, links, forms,
+          etc.
+        </p>
+
+        <div class="info-box info-warn">
+          <span class="icon">⚠️</span>
+          <div class="content">
+            <strong>Common Mistake</strong>
+            <p>
+              Never put visible content (text, images) inside the
+              <code>&lt;head&gt;</code>. It belongs in the
+              <code>&lt;body&gt;</code>. The browser will often display it
+              anyway, but this is incorrect HTML.
+            </p>
+          </div>
+        </div>
+
+        <h3>HTML Comments</h3>
+        <p>
+          Comments are notes for developers that the browser ignores entirely.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- This is a comment. The browser will not display this. --&gt;</span>
+
+<span class="comment">&lt;!-- 
+  Comments can also
+  span multiple lines
+--&gt;</span></code></pre>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 2.1</div>
+          <h5>Build the Boilerplate from Memory</h5>
+          <p>Without looking at your notes:</p>
+          <ol>
+            <li>
+              Open a brand-new file in VS Code called
+              <strong>structure.html</strong>
+            </li>
+            <li>Type the complete HTML5 boilerplate structure from memory</li>
+            <li>Set the <code>lang</code> attribute to <code>en</code></li>
+            <li>Set the title to "HTML Structure Practice"</li>
+            <li>
+              Add a paragraph in the body that says "This is the body section!"
+            </li>
+            <li>Verify it opens correctly in the browser</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 2.2</div>
+          <h5>Identify the Sections</h5>
+          <p>Given the HTML below, identify each part:</p>
+          <pre
+            data-lang="HTML"
+          ><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html <span class="attr">lang</span>=<span class="val">"fr"</span>&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta <span class="attr">charset</span>=<span class="val">"UTF-8"</span>&gt;</span>
+    <span class="tag">&lt;title&gt;</span><span class="text-node">Bonjour</span><span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="text-node">Bonjour le monde!</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+          <ol>
+            <li>What language is this page in? How do you know?</li>
+            <li>What will the browser tab display?</li>
+            <li>What will be visible on the page?</li>
+            <li>Move the title text into the body. What changes?</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 2</div>
+          <h5>Chapter 2 Knowledge Check</h5>
+          <ol>
+            <li>
+              What is the purpose of the
+              <code>&lt;!DOCTYPE html&gt;</code> declaration?
+            </li>
+            <li>
+              What is the difference between the <code>&lt;head&gt;</code> and
+              <code>&lt;body&gt;</code> elements?
+            </li>
+            <li>
+              What does the <code>lang</code> attribute on
+              <code>&lt;html&gt;</code> do?
+            </li>
+            <li>
+              What is an HTML comment, and what syntax is used to write one?
+            </li>
+            <li>
+              List three things that belong in the
+              <code>&lt;head&gt;</code> section.
+            </li>
+            <li>
+              <strong>Practical:</strong> Create a complete HTML page for a
+              fictional restaurant. Include a proper boilerplate, set the
+              language to English, title the page with the restaurant's name,
+              and add a welcome sentence in the body.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 3 — ELEMENTS, TAGS, ATTRIBUTES
+  ══════════════════════════════ -->
+      <section class="lesson" id="elements">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 03</div>
+          <div class="lesson-title-group">
+            <h2>HTML Elements, Tags & Attributes</h2>
+            <span class="subtitle">The building blocks of every webpage</span>
+          </div>
+        </div>
+
+        <h3>What is an HTML Element?</h3>
+        <p>
+          An <strong>HTML element</strong> consists of a start tag, content, and
+          an end tag:
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Anatomy of an element --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">This is a paragraph.</span><span class="tag">&lt;/p&gt;</span>
+<span class="comment">↑         ↑                    ↑</span>
+<span class="comment">Start tag  Content           End tag</span></code></pre>
+
+        <h3>Opening vs Closing Tags</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Opening tag --&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+
+<span class="comment">&lt;!-- Closing tag (note the forward slash) --&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Self-closing / void elements (no closing tag needed) --&gt;</span>
+<span class="tag">&lt;br&gt;</span>
+<span class="tag">&lt;hr&gt;</span>
+<span class="tag">&lt;img <span class="attr">src</span>=<span class="val">"photo.jpg"</span>&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"text"</span>&gt;</span></code></pre>
+
+        <h3>Nesting Elements</h3>
+        <p>
+          Elements can be placed inside other elements. This is called
+          <strong>nesting</strong>. Always close inner elements before outer
+          ones.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- ✅ Correct nesting --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">This is </span><span class="tag">&lt;strong&gt;</span><span class="text-node">bold text</span><span class="tag">&lt;/strong&gt;</span><span class="text-node"> inside a paragraph.</span><span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- ❌ Wrong nesting (overlapping tags) --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">This is </span><span class="tag">&lt;strong&gt;</span><span class="text-node">wrong</span><span class="tag">&lt;/p&gt;&lt;/strong&gt;</span></code></pre>
+
+        <h3>HTML Attributes</h3>
+        <p>
+          Attributes provide <strong>additional information</strong> about an
+          element. They always go in the <em>opening tag</em> and follow a
+          <code>name="value"</code> pattern.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Attribute syntax --&gt;</span>
+<span class="tag">&lt;tagname <span class="attr">attribute</span>=<span class="val">"value"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Multiple attributes --&gt;</span>
+<span class="tag">&lt;a <span class="attr">href</span>=<span class="val">"https://example.com"</span> <span class="attr">target</span>=<span class="val">"_blank"</span>&gt;</span><span class="text-node">Click here</span><span class="tag">&lt;/a&gt;</span>
+
+<span class="comment">&lt;!-- Boolean attributes (no value needed) --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"checkbox"</span> <span class="attr">checked</span>&gt;</span>
+<span class="tag">&lt;button <span class="attr">disabled</span>&gt;</span><span class="text-node">Cannot Click</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+        <h3>Common Global Attributes</h3>
+        <table class="ref-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>Unique identifier for one element</td>
+            <td><code>id="main-title"</code></td>
+          </tr>
+          <tr>
+            <td><code>class</code></td>
+            <td>Groups elements for CSS styling</td>
+            <td><code>class="card"</code></td>
+          </tr>
+          <tr>
+            <td><code>style</code></td>
+            <td>Inline CSS styling</td>
+            <td><code>style="color: red;"</code></td>
+          </tr>
+          <tr>
+            <td><code>title</code></td>
+            <td>Tooltip shown on hover</td>
+            <td><code>title="More info"</code></td>
+          </tr>
+          <tr>
+            <td><code>lang</code></td>
+            <td>Language of the element's content</td>
+            <td><code>lang="fr"</code></td>
+          </tr>
+          <tr>
+            <td><code>hidden</code></td>
+            <td>Hides the element from view</td>
+            <td><code>hidden</code></td>
+          </tr>
+        </table>
+
+        <div class="info-box info-tip">
+          <span class="icon">✅</span>
+          <div class="content">
+            <strong>Best Practice</strong>
+            <p>
+              Always use lowercase for tag names and attribute names. Always
+              wrap attribute values in double quotes. These are the modern HTML5
+              standards.
+            </p>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 3.1</div>
+          <h5>Spot the Errors</h5>
+          <p>The HTML below contains 4 mistakes. Find and fix them all:</p>
+          <pre
+            data-lang="HTML"
+          ><code>&lt;P CLASS=greeting&gt;Hello &lt;STRONG&gt;World&lt;/p&gt;&lt;/STRONG&gt;
+&lt;a href=https://google.com target="_blank"&gt;Google&lt;/a&gt;
+&lt;input TYPE="text" placeholder="Enter name"&gt;&lt;/input&gt;</code></pre>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 3.2</div>
+          <h5>Build an Attribute-Rich Page</h5>
+          <ol>
+            <li>
+              Create a page with a heading that has an <code>id</code> of
+              <code>"page-title"</code>
+            </li>
+            <li>
+              Add a paragraph with a <code>class</code> of
+              <code>"intro"</code> and a <code>title</code> attribute with a
+              tooltip message
+            </li>
+            <li>
+              Add a link that opens in a new tab using
+              <code>target="_blank"</code>
+            </li>
+            <li>Add a disabled button with the text "Coming Soon"</li>
+            <li>
+              Add a hidden paragraph — confirm it doesn't appear in the browser
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 3</div>
+          <h5>Chapter 3 Knowledge Check</h5>
+          <ol>
+            <li>What are the three parts of an HTML element?</li>
+            <li>What is a void (self-closing) element? Give two examples.</li>
+            <li>
+              What is wrong with
+              <code>&lt;p&gt;&lt;strong&gt;text&lt;/p&gt;&lt;/strong&gt;</code>?
+            </li>
+            <li>What is an attribute, and where does it go?</li>
+            <li>
+              What is the difference between <code>id</code> and
+              <code>class</code>?
+            </li>
+            <li>
+              <strong>Practical:</strong> Write an HTML snippet that contains: a
+              paragraph with an id, a link with an href and a target, and an
+              image tag (self-closing) with a src and alt attribute. Use correct
+              nesting and lowercase conventions throughout.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 4 — META TAGS
+  ══════════════════════════════ -->
+      <section class="lesson" id="meta">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 04</div>
+          <div class="lesson-title-group">
+            <h2>HTML Meta Tags</h2>
+            <span class="subtitle">Invisible data that powers your page</span>
+          </div>
+        </div>
+
+        <h3>What Are Meta Tags?</h3>
+        <p>
+          Meta tags live inside the <code>&lt;head&gt;</code> and provide
+          <strong>metadata</strong> — information about the page that browsers,
+          search engines, and social media platforms use. Users don't see them
+          directly, but they have a huge impact on how the page behaves and
+          ranks.
+        </p>
+
+        <h3>Essential Meta Tags</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;head&gt;</span>
+  <span class="comment">&lt;!-- Character Encoding --&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">charset</span>=<span class="val">"UTF-8"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Responsive viewport --&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name</span>=<span class="val">"viewport"</span> <span class="attr">content</span>=<span class="val">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Page description (shown in Google results) --&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name</span>=<span class="val">"description"</span> <span class="attr">content</span>=<span class="val">"Learn HTML from scratch in this beginner course."</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Author --&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name</span>=<span class="val">"author"</span> <span class="attr">content</span>=<span class="val">"Jane Doe"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Keywords (less important today, but still used) --&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">name</span>=<span class="val">"keywords"</span> <span class="attr">content</span>=<span class="val">"HTML, web, beginner, course"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- Refresh the page every 30 seconds --&gt;</span>
+  <span class="tag">&lt;meta <span class="attr">http-equiv</span>=<span class="val">"refresh"</span> <span class="attr">content</span>=<span class="val">"30"</span>&gt;</span>
+<span class="tag">&lt;/head&gt;</span></code></pre>
+
+        <h3>Open Graph Meta Tags</h3>
+        <p>
+          Open Graph tags control how your page looks when shared on social
+          media (Facebook, Twitter, WhatsApp, etc.).
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Open Graph (social media preview) --&gt;</span>
+<span class="tag">&lt;meta <span class="attr">property</span>=<span class="val">"og:title"</span> <span class="attr">content</span>=<span class="val">"Learn HTML – Beginner Course"</span>&gt;</span>
+<span class="tag">&lt;meta <span class="attr">property</span>=<span class="val">"og:description"</span> <span class="attr">content</span>=<span class="val">"A complete HTML course for beginners."</span>&gt;</span>
+<span class="tag">&lt;meta <span class="attr">property</span>=<span class="val">"og:image"</span> <span class="attr">content</span>=<span class="val">"https://example.com/thumbnail.jpg"</span>&gt;</span>
+<span class="tag">&lt;meta <span class="attr">property</span>=<span class="val">"og:url"</span> <span class="attr">content</span>=<span class="val">"https://example.com"</span>&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Meta Tag</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td><code>charset="UTF-8"</code></td>
+            <td>
+              Supports all characters including special symbols and emojis
+            </td>
+          </tr>
+          <tr>
+            <td><code>name="viewport"</code></td>
+            <td>Makes the page mobile-responsive</td>
+          </tr>
+          <tr>
+            <td><code>name="description"</code></td>
+            <td>Search engine result snippet (keep under 160 characters)</td>
+          </tr>
+          <tr>
+            <td><code>name="author"</code></td>
+            <td>Credits the page author</td>
+          </tr>
+          <tr>
+            <td><code>name="robots"</code></td>
+            <td>Controls search engine indexing behavior</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-note">
+          <span class="icon">🔍</span>
+          <div class="content">
+            <strong>SEO Tip</strong>
+            <p>
+              The <code>description</code> meta tag is one of the most important
+              for SEO (Search Engine Optimisation). Write it carefully — it's
+              what users see under your page title in Google search results!
+            </p>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 4.1</div>
+          <h5>Build a Complete Head Section</h5>
+          <p>For a fictional website called "FoodieHub Nigeria":</p>
+          <ol>
+            <li>Set the charset to UTF-8</li>
+            <li>Add the viewport meta tag</li>
+            <li>
+              Write a description meta tag (under 160 characters) describing the
+              site
+            </li>
+            <li>Add your name as the author</li>
+            <li>Add at least 5 keywords related to food</li>
+            <li>Set an appropriate page title</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 4.2</div>
+          <h5>Add Open Graph Tags</h5>
+          <ol>
+            <li>Take your FoodieHub Nigeria page from Exercise 4.1</li>
+            <li>
+              Add all four essential Open Graph meta tags
+              (<code>og:title</code>, <code>og:description</code>,
+              <code>og:image</code>, <code>og:url</code>)
+            </li>
+            <li>
+              Research: visit
+              <a href="https://metatags.io" style="color: var(--accent2)"
+                >metatags.io</a
+              >
+              and try previewing how a real page looks on social media
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 4</div>
+          <h5>Chapter 4 Knowledge Check</h5>
+          <ol>
+            <li>Where do meta tags go in an HTML document?</li>
+            <li>Why is <code>charset="UTF-8"</code> important?</li>
+            <li>What does the viewport meta tag do?</li>
+            <li>How many characters should a meta description ideally be?</li>
+            <li>What are Open Graph tags used for?</li>
+            <li>
+              <strong>Practical:</strong> Write a complete
+              <code>&lt;head&gt;</code> section for a portfolio website. Include
+              charset, viewport, title, description, author, and Open Graph
+              tags.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 5 — PARAGRAPHS & HEADINGS
+  ══════════════════════════════ -->
+      <section class="lesson" id="text">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 05</div>
+          <div class="lesson-title-group">
+            <h2>HTML Paragraphs & Headings</h2>
+            <span class="subtitle">Structuring text content on the page</span>
+          </div>
+        </div>
+
+        <h3>Heading Tags (h1–h6)</h3>
+        <p>
+          HTML provides <strong>six levels of headings</strong>, from
+          <code>&lt;h1&gt;</code> (most important) to
+          <code>&lt;h6&gt;</code> (least important). Headings form a hierarchy —
+          like an outline for your content.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="tag">&lt;h1&gt;</span><span class="text-node">Main Page Title (only one per page)</span><span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span><span class="text-node">Section Heading</span><span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span><span class="text-node">Sub-section Heading</span><span class="tag">&lt;/h3&gt;</span>
+<span class="tag">&lt;h4&gt;</span><span class="text-node">Sub-sub-section Heading</span><span class="tag">&lt;/h4&gt;</span>
+<span class="tag">&lt;h5&gt;</span><span class="text-node">Minor Heading</span><span class="tag">&lt;/h5&gt;</span>
+<span class="tag">&lt;h6&gt;</span><span class="text-node">Smallest Heading</span><span class="tag">&lt;/h6&gt;</span></code></pre>
+
+        <h3>Paragraph Tags</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Basic paragraph --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">This is a paragraph. The browser automatically adds space before and after.</span><span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Line break inside a paragraph --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">First line of text.<span class="tag">&lt;br&gt;</span>
+Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Horizontal rule (thematic break) --&gt;</span>
+<span class="tag">&lt;hr&gt;</span></code></pre>
+
+        <h3>Text Formatting Elements</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;strong&gt;</span><span class="text-node">Bold / important text</span><span class="tag">&lt;/strong&gt;</span>
+  <span class="tag">&lt;em&gt;</span><span class="text-node">Italic / emphasized text</span><span class="tag">&lt;/em&gt;</span>
+  <span class="tag">&lt;mark&gt;</span><span class="text-node">Highlighted text</span><span class="tag">&lt;/mark&gt;</span>
+  <span class="tag">&lt;del&gt;</span><span class="text-node">Struck-through / deleted text</span><span class="tag">&lt;/del&gt;</span>
+  <span class="tag">&lt;ins&gt;</span><span class="text-node">Underlined / inserted text</span><span class="tag">&lt;/ins&gt;</span>
+  <span class="tag">&lt;sub&gt;</span><span class="text-node">Subscript</span><span class="tag">&lt;/sub&gt;</span>  H<span class="tag">&lt;sub&gt;</span><span class="text-node">2</span><span class="tag">&lt;/sub&gt;</span>O
+  <span class="tag">&lt;sup&gt;</span><span class="text-node">Superscript</span><span class="tag">&lt;/sup&gt;</span>  E = mc<span class="tag">&lt;sup&gt;</span><span class="text-node">2</span><span class="tag">&lt;/sup&gt;</span>
+  <span class="tag">&lt;code&gt;</span><span class="text-node">Inline code text</span><span class="tag">&lt;/code&gt;</span>
+  <span class="tag">&lt;abbr <span class="attr">title</span>=<span class="val">"HyperText Markup Language"</span>&gt;</span><span class="text-node">HTML</span><span class="tag">&lt;/abbr&gt;</span>
+<span class="tag">&lt;/p&gt;</span></code></pre>
+
+        <div class="info-box info-tip">
+          <span class="icon">✅</span>
+          <div class="content">
+            <strong>Semantic Tip</strong>
+            <p>
+              Use <code>&lt;strong&gt;</code> instead of
+              <code>&lt;b&gt;</code> for bold, and
+              <code>&lt;em&gt;</code> instead of <code>&lt;i&gt;</code> for
+              italics. The semantic versions communicate <em>meaning</em> to
+              screen readers and search engines — not just visual style.
+            </p>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 5.1</div>
+          <h5>Article Structure</h5>
+          <p>
+            Create a page about your favourite topic (sport, food, music, etc.):
+          </p>
+          <ol>
+            <li>Use one <code>&lt;h1&gt;</code> as the article title</li>
+            <li>Use <code>&lt;h2&gt;</code> for at least 3 sections</li>
+            <li>
+              Use <code>&lt;h3&gt;</code> under at least one
+              <code>&lt;h2&gt;</code>
+            </li>
+            <li>Write a paragraph under each section heading</li>
+            <li>Add a <code>&lt;hr&gt;</code> between two sections</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 5.2</div>
+          <h5>Formatting Text</h5>
+          <p>Write a paragraph about a scientific fact that includes:</p>
+          <ol>
+            <li>A <code>&lt;strong&gt;</code> term that is defined</li>
+            <li>An <code>&lt;em&gt;</code> word for emphasis</li>
+            <li>
+              A <code>&lt;mark&gt;</code> to highlight an important number or
+              date
+            </li>
+            <li>
+              A chemical formula using <code>&lt;sub&gt;</code> (e.g. H₂O or
+              CO₂)
+            </li>
+            <li>
+              A mathematical expression using <code>&lt;sup&gt;</code> (e.g.
+              10²)
+            </li>
+            <li>
+              An <code>&lt;abbr&gt;</code> with its full meaning in the
+              <code>title</code> attribute
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 5</div>
+          <h5>Chapter 5 Knowledge Check</h5>
+          <ol>
+            <li>
+              How many heading levels exist in HTML? Which is the most
+              important?
+            </li>
+            <li>
+              Should you use multiple <code>&lt;h1&gt;</code> tags on one page?
+              Why?
+            </li>
+            <li>
+              What is the difference between <code>&lt;br&gt;</code> and a new
+              <code>&lt;p&gt;</code> tag?
+            </li>
+            <li>
+              What is the difference between <code>&lt;strong&gt;</code> and
+              <code>&lt;b&gt;</code>?
+            </li>
+            <li>What tag would you use to show "E = mc²" correctly in HTML?</li>
+            <li>
+              <strong>Practical:</strong> Create a blog post page with a main
+              title (<code>h1</code>), three sections (<code>h2</code>), a
+              sub-section (<code>h3</code>), paragraphs with bold, italic,
+              highlighted, and subscript/superscript text, and a horizontal
+              rule.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 6 — SEMANTIC ELEMENTS
+  ══════════════════════════════ -->
+      <section class="lesson" id="semantic">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 06</div>
+          <div class="lesson-title-group">
+            <h2>HTML Semantic Elements</h2>
+            <span class="subtitle"
+              >div, section, main, article, header, footer & more</span
+            >
+          </div>
+        </div>
+
+        <h3>What is Semantic HTML?</h3>
+        <p>
+          <strong>Semantic elements</strong> have meaningful names that describe
+          their purpose. Before HTML5, developers used
+          <code>&lt;div&gt;</code> for everything. HTML5 introduced semantic
+          tags that tell both browsers and developers <em>what</em> the content
+          represents.
+        </p>
+        <p>
+          This matters for <strong>accessibility</strong>, <strong>SEO</strong>,
+          and <strong>code readability</strong>.
+        </p>
+
+        <h3>The Core Semantic Layout Elements</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;body&gt;</span>
+
+  <span class="comment">&lt;!-- The top section of the page or a section --&gt;</span>
+  <span class="tag">&lt;header&gt;</span>
+    <span class="tag">&lt;h1&gt;</span><span class="text-node">My Website</span><span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;nav&gt;</span>
+      <span class="tag">&lt;a <span class="attr">href</span>=<span class="val">"#home"</span>&gt;</span><span class="text-node">Home</span><span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;a <span class="attr">href</span>=<span class="val">"#about"</span>&gt;</span><span class="text-node">About</span><span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/nav&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+
+  <span class="comment">&lt;!-- The primary content of the page (only one per page) --&gt;</span>
+  <span class="tag">&lt;main&gt;</span>
+
+    <span class="comment">&lt;!-- A standalone, reusable piece of content --&gt;</span>
+    <span class="tag">&lt;article&gt;</span>
+      <span class="tag">&lt;h2&gt;</span><span class="text-node">Blog Post Title</span><span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;p&gt;</span><span class="text-node">Article content...</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/article&gt;</span>
+
+    <span class="comment">&lt;!-- A themed grouping of content --&gt;</span>
+    <span class="tag">&lt;section&gt;</span>
+      <span class="tag">&lt;h2&gt;</span><span class="text-node">About Me</span><span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;p&gt;</span><span class="text-node">Section content...</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/section&gt;</span>
+
+    <span class="comment">&lt;!-- Related/supplementary content --&gt;</span>
+    <span class="tag">&lt;aside&gt;</span>
+      <span class="tag">&lt;p&gt;</span><span class="text-node">Did you know? Fun fact here.</span><span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/aside&gt;</span>
+
+  <span class="tag">&lt;/main&gt;</span>
+
+  <span class="comment">&lt;!-- The bottom section of the page --&gt;</span>
+  <span class="tag">&lt;footer&gt;</span>
+    <span class="tag">&lt;p&gt;</span><span class="text-node">&amp;copy; 2025 My Website. All rights reserved.</span><span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/footer&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span></code></pre>
+
+        <h3>div vs span (Generic Containers)</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- div: block-level container, creates a new line --&gt;</span>
+<span class="tag">&lt;div <span class="attr">class</span>=<span class="val">"card"</span>&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="text-node">Card content here.</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- span: inline container, stays within text flow --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">The price is </span><span class="tag">&lt;span <span class="attr">style</span>=<span class="val">"color: red;"</span>&gt;</span><span class="text-node">₦5,000</span><span class="tag">&lt;/span&gt;</span><span class="text-node"> only.</span><span class="tag">&lt;/p&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Element</th>
+            <th>Use When…</th>
+          </tr>
+          <tr>
+            <td><code>&lt;header&gt;</code></td>
+            <td>
+              Introductory content, logos, navigation at top of page/section
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;nav&gt;</code></td>
+            <td>A group of navigation links</td>
+          </tr>
+          <tr>
+            <td><code>&lt;main&gt;</code></td>
+            <td>The central, unique content of the page (one per page)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;article&gt;</code></td>
+            <td>
+              Self-contained content that could stand alone (blog post, news
+              item)
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;</code></td>
+            <td>A thematic grouping of content with its own heading</td>
+          </tr>
+          <tr>
+            <td><code>&lt;aside&gt;</code></td>
+            <td>
+              Sidebar, pull quotes, related info tangential to main content
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;footer&gt;</code></td>
+            <td>Copyright, links, contact info at bottom of page/section</td>
+          </tr>
+          <tr>
+            <td><code>&lt;div&gt;</code></td>
+            <td>No semantic meaning needed — purely for grouping/styling</td>
+          </tr>
+          <tr>
+            <td><code>&lt;span&gt;</code></td>
+            <td>Inline styling or grouping within text</td>
+          </tr>
+        </table>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 6.1</div>
+          <h5>Build a Semantic Page Layout</h5>
+          <p>Create a full-page layout for a news website:</p>
+          <ol>
+            <li>
+              Add a <code>&lt;header&gt;</code> with the site name and a
+              <code>&lt;nav&gt;</code> with 3 links
+            </li>
+            <li>
+              Add a <code>&lt;main&gt;</code> area with two
+              <code>&lt;article&gt;</code> elements (each with a title and
+              paragraph)
+            </li>
+            <li>
+              Add a <code>&lt;section&gt;</code> for "Trending Topics" inside
+              <code>&lt;main&gt;</code>
+            </li>
+            <li>Add an <code>&lt;aside&gt;</code> with a fun fact</li>
+            <li>
+              Add a <code>&lt;footer&gt;</code> with copyright text and a
+              contact email link
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 6.2</div>
+          <h5>div vs Semantic — Rewrite It</h5>
+          <p>Rewrite the following code using appropriate semantic elements:</p>
+          <pre
+            data-lang="HTML"
+          ><code><span class="tag">&lt;div <span class="attr">id</span>=<span class="val">"top"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="attr">id</span>=<span class="val">"logo"</span>&gt;</span><span class="text-node">MySite</span><span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="attr">id</span>=<span class="val">"menu"</span>&gt;</span><span class="text-node">Home | About | Contact</span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="attr">id</span>=<span class="val">"content"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="attr">class</span>=<span class="val">"post"</span>&gt;</span><span class="text-node">Post body text</span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="attr">id</span>=<span class="val">"bottom"</span>&gt;</span><span class="text-node">&amp;copy; 2025</span><span class="tag">&lt;/div&gt;</span></code></pre>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 6</div>
+          <h5>Chapter 6 Knowledge Check</h5>
+          <ol>
+            <li>What is semantic HTML and why does it matter?</li>
+            <li>
+              What is the difference between <code>&lt;article&gt;</code> and
+              <code>&lt;section&gt;</code>?
+            </li>
+            <li>
+              Can you have more than one <code>&lt;main&gt;</code> on a page?
+              Why?
+            </li>
+            <li>
+              When would you use <code>&lt;div&gt;</code> instead of a semantic
+              element?
+            </li>
+            <li>
+              What is the difference between a block element and an inline
+              element? Give an example of each.
+            </li>
+            <li>
+              <strong>Practical:</strong> Build a complete semantic HTML page
+              for a personal portfolio: header with nav, main with a hero
+              section and projects section, an aside with skills, and a footer.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 7 — LISTS
+  ══════════════════════════════ -->
+      <section class="lesson" id="lists">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 07</div>
+          <div class="lesson-title-group">
+            <h2>HTML Lists</h2>
+            <span class="subtitle">ol, ul, li — and how to nest them</span>
+          </div>
+        </div>
+
+        <h3>Unordered Lists (ul)</h3>
+        <p>
+          Use an unordered list when <strong>order doesn't matter</strong> —
+          like a shopping list or a set of features. Each item is rendered with
+          a bullet point.
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Rice</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Beans</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Plantain</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></code></pre>
+
+        <h3>Ordered Lists (ol)</h3>
+        <p>
+          Use an ordered list when <strong>sequence matters</strong> — like
+          step-by-step instructions or a ranking. Items are numbered
+          automatically.
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Boil water</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Add rice</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Cook for 20 minutes</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Serve hot</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="comment">&lt;!-- Start numbering from 5 --&gt;</span>
+<span class="tag">&lt;ol <span class="attr">start</span>=<span class="val">"5"</span>&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Step five</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="comment">&lt;!-- Reverse order --&gt;</span>
+<span class="tag">&lt;ol <span class="attr">reversed</span>&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Third</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Second</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">First</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span></code></pre>
+
+        <h3>Description Lists (dl)</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;dl&gt;</span>
+  <span class="tag">&lt;dt&gt;</span><span class="text-node">HTML</span><span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span><span class="text-node">HyperText Markup Language — the language of the web.</span><span class="tag">&lt;/dd&gt;</span>
+
+  <span class="tag">&lt;dt&gt;</span><span class="text-node">CSS</span><span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span><span class="text-node">Cascading Style Sheets — used to style HTML.</span><span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span></code></pre>
+
+        <h3>Nested Lists</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Fruits
+    </span><span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span><span class="text-node">Mango</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span><span class="text-node">Orange</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="text-node">Vegetables
+    </span><span class="tag">&lt;ol&gt;</span>
+      <span class="tag">&lt;li&gt;</span><span class="text-node">Tomato</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span><span class="text-node">Spinach</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ol&gt;</span>
+  <span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></code></pre>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 7.1</div>
+          <h5>Recipe with Lists</h5>
+          <p>Build a recipe page for your favourite Nigerian dish:</p>
+          <ol>
+            <li>Use an <code>&lt;h1&gt;</code> for the dish name</li>
+            <li>Create a <code>&lt;ul&gt;</code> for the ingredients</li>
+            <li>Create an <code>&lt;ol&gt;</code> for the cooking steps</li>
+            <li>
+              Inside the ingredients list, nest a <code>&lt;ul&gt;</code> under
+              "Spices" with at least 3 spice items
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 7.2</div>
+          <h5>Glossary with Description List</h5>
+          <p>
+            Create a web developer glossary using <code>&lt;dl&gt;</code>,
+            <code>&lt;dt&gt;</code>, and <code>&lt;dd&gt;</code>. Include at
+            least 5 terms: HTML, CSS, JavaScript, Browser, and Server. Write a
+            one-sentence definition for each.
+          </p>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 7</div>
+          <h5>Chapter 7 Knowledge Check</h5>
+          <ol>
+            <li>
+              What is the difference between <code>&lt;ul&gt;</code> and
+              <code>&lt;ol&gt;</code>?
+            </li>
+            <li>What tag is used for each list item?</li>
+            <li>
+              When would you use a description list (<code>&lt;dl&gt;</code>)?
+            </li>
+            <li>How do you start an ordered list from the number 3?</li>
+            <li>
+              Can you nest a <code>&lt;ul&gt;</code> inside an
+              <code>&lt;ol&gt;</code>? Show an example.
+            </li>
+            <li>
+              <strong>Practical:</strong> Create a page called "My Top 5 Movies"
+              with a numbered list, and under each movie add a nested unordered
+              list with 2 reasons why you like it.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 8 — IMAGES
+  ══════════════════════════════ -->
+      <section class="lesson" id="images">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 08</div>
+          <div class="lesson-title-group">
+            <h2>HTML Images</h2>
+            <span class="subtitle"
+              >Displaying and optimising images on the web</span
+            >
+          </div>
+        </div>
+
+        <h3>The &lt;img&gt; Tag</h3>
+        <p>
+          Images are embedded using the self-closing
+          <code>&lt;img&gt;</code> tag. Two attributes are
+          <strong>mandatory</strong>: <code>src</code> and <code>alt</code>.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Basic image from same folder --&gt;</span>
+<span class="tag">&lt;img <span class="attr">src</span>=<span class="val">"photo.jpg"</span> <span class="attr">alt</span>=<span class="val">"A beautiful sunset"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Image from another folder --&gt;</span>
+<span class="tag">&lt;img <span class="attr">src</span>=<span class="val">"images/logo.png"</span> <span class="attr">alt</span>=<span class="val">"Company Logo"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Image from the internet (URL) --&gt;</span>
+<span class="tag">&lt;img <span class="attr">src</span>=<span class="val">"https://example.com/photo.jpg"</span> <span class="attr">alt</span>=<span class="val">"Sample image"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Image with width, height, and title --&gt;</span>
+<span class="tag">&lt;img
+  <span class="attr">src</span>=<span class="val">"portrait.jpg"</span>
+  <span class="attr">alt</span>=<span class="val">"A portrait photo of Jane"</span>
+  <span class="attr">width</span>=<span class="val">"300"</span>
+  <span class="attr">height</span>=<span class="val">"400"</span>
+  <span class="attr">title</span>=<span class="val">"Jane Doe — CEO"</span>
+&gt;</span></code></pre>
+
+        <h3>Figure and Figcaption</h3>
+        <p>
+          Use <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> to
+          semantically associate an image with its caption.
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;figure&gt;</span>
+  <span class="tag">&lt;img <span class="attr">src</span>=<span class="val">"eko-bridge.jpg"</span> <span class="attr">alt</span>=<span class="val">"Eko Bridge in Lagos at sunset"</span>&gt;</span>
+  <span class="tag">&lt;figcaption&gt;</span><span class="text-node">Eko Bridge, Lagos — photographed at dusk.</span><span class="tag">&lt;/figcaption&gt;</span>
+<span class="tag">&lt;/figure&gt;</span></code></pre>
+
+        <h3>Image Formats</h3>
+        <table class="ref-table">
+          <tr>
+            <th>Format</th>
+            <th>Best For</th>
+            <th>Supports Transparency?</th>
+          </tr>
+          <tr>
+            <td>JPEG / JPG</td>
+            <td>Photographs, complex images</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>PNG</td>
+            <td>Logos, icons, images needing transparency</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>GIF</td>
+            <td>Simple animations</td>
+            <td>Yes (1-bit)</td>
+          </tr>
+          <tr>
+            <td>SVG</td>
+            <td>Icons, logos (vector — scales perfectly)</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>WebP</td>
+            <td>Modern format — smaller than JPG/PNG</td>
+            <td>Yes</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-warn">
+          <span class="icon">♿</span>
+          <div class="content">
+            <strong>Accessibility — Always Write Good Alt Text</strong>
+            <p>
+              The <code>alt</code> attribute is read aloud by screen readers for
+              visually impaired users. Write a meaningful description. For
+              decorative images with no meaning, use <code>alt=""</code> so
+              screen readers skip them.
+            </p>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 8.1</div>
+          <h5>Image Gallery Page</h5>
+          <ol>
+            <li>
+              Find 4 free images from
+              <a href="https://unsplash.com" style="color: var(--accent2)"
+                >unsplash.com</a
+              >
+              and download them
+            </li>
+            <li>
+              Place them in an <code>images/</code> folder inside your project
+            </li>
+            <li>Create a page called <code>gallery.html</code></li>
+            <li>Display all 4 images using relative paths</li>
+            <li>
+              Wrap each image in a <code>&lt;figure&gt;</code> with a
+              <code>&lt;figcaption&gt;</code> describing the photo
+            </li>
+            <li>Set a <code>width</code> of 400 on each image</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 8.2</div>
+          <h5>Accessible Alt Text</h5>
+          <p>
+            For each image below, write an appropriate
+            <code>alt</code> attribute:
+          </p>
+          <ol>
+            <li>A photo of children playing football on a street in Lagos</li>
+            <li>A company logo for "TechVest Nigeria"</li>
+            <li>A decorative pattern used only for visual spacing</li>
+            <li>A graph showing Nigeria's GDP growth from 2000–2024</li>
+            <li>A portrait of a woman smiling in an office environment</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 8</div>
+          <h5>Chapter 8 Knowledge Check</h5>
+          <ol>
+            <li>
+              What are the two mandatory attributes of an
+              <code>&lt;img&gt;</code> tag?
+            </li>
+            <li>What is the purpose of the <code>alt</code> attribute?</li>
+            <li>
+              What is the difference between a relative path and an absolute URL
+              for images?
+            </li>
+            <li>When should you use PNG vs JPEG?</li>
+            <li>
+              What is the semantic purpose of <code>&lt;figure&gt;</code> and
+              <code>&lt;figcaption&gt;</code>?
+            </li>
+            <li>
+              <strong>Practical:</strong> Create a "My City" page with at least
+              3 images of your city, each wrapped in a figure with a caption,
+              with proper alt text and width attributes.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 9 — TABLES
+  ══════════════════════════════ -->
+      <section class="lesson" id="tables">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 09</div>
+          <div class="lesson-title-group">
+            <h2>HTML Tables</h2>
+            <span class="subtitle">Displaying data in rows and columns</span>
+          </div>
+        </div>
+
+        <h3>Basic Table Structure</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;table&gt;</span>
+
+  <span class="comment">&lt;!-- Table caption (optional but good for accessibility) --&gt;</span>
+  <span class="tag">&lt;caption&gt;</span><span class="text-node">Student Scores</span><span class="tag">&lt;/caption&gt;</span>
+
+  <span class="comment">&lt;!-- Table head --&gt;</span>
+  <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th&gt;</span><span class="text-node">Name</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span><span class="text-node">Subject</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th&gt;</span><span class="text-node">Score</span><span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="comment">&lt;!-- Table body --&gt;</span>
+  <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">Amara</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">Mathematics</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">92</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">Chidi</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">English</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">85</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+  <span class="comment">&lt;!-- Table footer --&gt;</span>
+  <span class="tag">&lt;tfoot&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td <span class="attr">colspan</span>=<span class="val">"2"</span>&gt;</span><span class="text-node">Average</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">88.5</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tfoot&gt;</span>
+
+<span class="tag">&lt;/table&gt;</span></code></pre>
+
+        <h3>Spanning Cells</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- colspan: merge cells horizontally --&gt;</span>
+<span class="tag">&lt;td <span class="attr">colspan</span>=<span class="val">"3"</span>&gt;</span><span class="text-node">This cell spans 3 columns</span><span class="tag">&lt;/td&gt;</span>
+
+<span class="comment">&lt;!-- rowspan: merge cells vertically --&gt;</span>
+<span class="tag">&lt;td <span class="attr">rowspan</span>=<span class="val">"2"</span>&gt;</span><span class="text-node">This cell spans 2 rows</span><span class="tag">&lt;/td&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Tag</th>
+            <th>Meaning</th>
+          </tr>
+          <tr>
+            <td><code>&lt;table&gt;</code></td>
+            <td>The table container</td>
+          </tr>
+          <tr>
+            <td><code>&lt;thead&gt;</code></td>
+            <td>Table header section</td>
+          </tr>
+          <tr>
+            <td><code>&lt;tbody&gt;</code></td>
+            <td>Table body (main data)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;tfoot&gt;</code></td>
+            <td>Table footer (summaries/totals)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;tr&gt;</code></td>
+            <td>Table row</td>
+          </tr>
+          <tr>
+            <td><code>&lt;th&gt;</code></td>
+            <td>Table header cell (bold, centred by default)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;td&gt;</code></td>
+            <td>Table data cell</td>
+          </tr>
+          <tr>
+            <td><code>&lt;caption&gt;</code></td>
+            <td>Table title/caption</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-note">
+          <span class="icon">💡</span>
+          <div class="content">
+            <strong>Remember</strong>
+            <p>
+              HTML tables are for <em>tabular data only</em>. Never use tables
+              for page layout — use semantic elements and CSS instead. This was
+              a common mistake in early web development.
+            </p>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 9.1</div>
+          <h5>Timetable Table</h5>
+          <p>
+            Create a school timetable for Monday–Friday using an HTML table:
+          </p>
+          <ol>
+            <li>
+              Use <code>&lt;thead&gt;</code> with column headers: Time, Monday,
+              Tuesday, Wednesday, Thursday, Friday
+            </li>
+            <li>Add at least 4 time slots in the <code>&lt;tbody&gt;</code></li>
+            <li>
+              Use <code>colspan</code> for at least one "Break" row that spans
+              all days
+            </li>
+            <li>Add a <code>&lt;caption&gt;</code> for the table</li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 9.2</div>
+          <h5>Product Pricing Table</h5>
+          <p>
+            Create a pricing comparison table for 3 subscription plans (Basic,
+            Pro, Enterprise) with the following rows: Price, Storage, Users,
+            Support, and a "Recommended" row merged across all three using
+            <code>colspan</code> for one plan.
+          </p>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 9</div>
+          <h5>Chapter 9 Knowledge Check</h5>
+          <ol>
+            <li>What are the three semantic sections of a table?</li>
+            <li>
+              What is the difference between <code>&lt;th&gt;</code> and
+              <code>&lt;td&gt;</code>?
+            </li>
+            <li>What does <code>colspan="3"</code> do to a cell?</li>
+            <li>What is <code>&lt;caption&gt;</code> used for?</li>
+            <li>Why should tables not be used for page layout?</li>
+            <li>
+              <strong>Practical:</strong> Build a results table for 5 students
+              showing Name, Class, English Score, Maths Score, and Average. Use
+              <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and
+              <code>&lt;tfoot&gt;</code>. In the footer, show the class average
+              for each subject.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 10 — FORMS
+  ══════════════════════════════ -->
+      <section class="lesson" id="forms">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 10</div>
+          <div class="lesson-title-group">
+            <h2>HTML Forms</h2>
+            <span class="subtitle">Collecting input from users</span>
+          </div>
+        </div>
+
+        <h3>The &lt;form&gt; Element</h3>
+        <p>
+          Forms allow users to enter data that is sent to a server. The
+          <code>action</code> attribute specifies where to send the data, and
+          <code>method</code> specifies how.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="tag">&lt;form <span class="attr">action</span>=<span class="val">"/submit"</span> <span class="attr">method</span>=<span class="val">"post"</span>&gt;</span>
+  <span class="comment">&lt;!-- Form fields go here --&gt;</span>
+<span class="tag">&lt;/form&gt;</span></code></pre>
+
+        <h3>Input Types</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Text input --&gt;</span>
+<span class="tag">&lt;label <span class="attr">for</span>=<span class="val">"name"</span>&gt;</span><span class="text-node">Full Name:</span><span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">id</span>=<span class="val">"name"</span> <span class="attr">name</span>=<span class="val">"name"</span> <span class="attr">placeholder</span>=<span class="val">"Enter your name"</span> <span class="attr">required</span>&gt;</span>
+
+<span class="comment">&lt;!-- Email --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"email"</span> <span class="attr">id</span>=<span class="val">"email"</span> <span class="attr">name</span>=<span class="val">"email"</span> <span class="attr">placeholder</span>=<span class="val">"you@example.com"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Password --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"password"</span> <span class="attr">id</span>=<span class="val">"pw"</span> <span class="attr">name</span>=<span class="val">"password"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Number --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"number"</span> <span class="attr">min</span>=<span class="val">"1"</span> <span class="attr">max</span>=<span class="val">"100"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Date --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"date"</span> <span class="attr">name</span>=<span class="val">"dob"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Telephone --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"tel"</span> <span class="attr">name</span>=<span class="val">"phone"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Radio buttons --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"radio"</span> <span class="attr">name</span>=<span class="val">"gender"</span> <span class="attr">value</span>=<span class="val">"male"</span>&gt;</span> <span class="text-node">Male</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"radio"</span> <span class="attr">name</span>=<span class="val">"gender"</span> <span class="attr">value</span>=<span class="val">"female"</span>&gt;</span> <span class="text-node">Female</span>
+
+<span class="comment">&lt;!-- Checkboxes --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"checkbox"</span> <span class="attr">name</span>=<span class="val">"html"</span> <span class="attr">value</span>=<span class="val">"html"</span>&gt;</span> <span class="text-node">HTML</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"checkbox"</span> <span class="attr">name</span>=<span class="val">"css"</span> <span class="attr">value</span>=<span class="val">"css"</span>&gt;</span> <span class="text-node">CSS</span>
+
+<span class="comment">&lt;!-- File upload --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"file"</span> <span class="attr">accept</span>=<span class="val">".jpg,.png,.pdf"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Colour picker --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"color"</span> <span class="attr">name</span>=<span class="val">"fav-color"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Range slider --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"range"</span> <span class="attr">min</span>=<span class="val">"0"</span> <span class="attr">max</span>=<span class="val">"100"</span> <span class="attr">step</span>=<span class="val">"5"</span>&gt;</span>
+
+<span class="comment">&lt;!-- Submit button --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"submit"</span> <span class="attr">value</span>=<span class="val">"Submit Form"</span>&gt;</span></code></pre>
+
+        <h3>Textarea, Select, and Button</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Multi-line text area --&gt;</span>
+<span class="tag">&lt;textarea <span class="attr">name</span>=<span class="val">"message"</span> <span class="attr">rows</span>=<span class="val">"5"</span> <span class="attr">cols</span>=<span class="val">"40"</span> <span class="attr">placeholder</span>=<span class="val">"Write your message..."</span>&gt;&lt;/textarea&gt;</span>
+
+<span class="comment">&lt;!-- Dropdown select --&gt;</span>
+<span class="tag">&lt;select <span class="attr">name</span>=<span class="val">"state"</span>&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">""</span>&gt;</span><span class="text-node">-- Select State --</span><span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"lagos"</span>&gt;</span><span class="text-node">Lagos</span><span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"abuja"</span>&gt;</span><span class="text-node">Abuja</span><span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"kano"</span>&gt;</span><span class="text-node">Kano</span><span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span>
+
+<span class="comment">&lt;!-- Button element --&gt;</span>
+<span class="tag">&lt;button <span class="attr">type</span>=<span class="val">"submit"</span>&gt;</span><span class="text-node">Send Message</span><span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="attr">type</span>=<span class="val">"reset"</span>&gt;</span><span class="text-node">Clear Form</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+        <h3>Fieldset and Legend</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;fieldset&gt;</span>
+  <span class="tag">&lt;legend&gt;</span><span class="text-node">Personal Information</span><span class="tag">&lt;/legend&gt;</span>
+  <span class="tag">&lt;label <span class="attr">for</span>=<span class="val">"fname"</span>&gt;</span><span class="text-node">First Name:</span><span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">id</span>=<span class="val">"fname"</span> <span class="attr">name</span>=<span class="val">"fname"</span>&gt;</span>
+<span class="tag">&lt;/fieldset&gt;</span></code></pre>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 10.1</div>
+          <h5>Registration Form</h5>
+          <p>Build a student registration form with:</p>
+          <ol>
+            <li>
+              Fields: First Name, Last Name, Email, Phone, Date of Birth, State
+              (dropdown)
+            </li>
+            <li>Gender using radio buttons</li>
+            <li>Courses of interest using checkboxes (at least 4 options)</li>
+            <li>A "Tell us about yourself" textarea</li>
+            <li>File upload for a profile picture</li>
+            <li>Submit and Reset buttons</li>
+            <li>
+              Group fields into logical <code>&lt;fieldset&gt;</code> sections
+            </li>
+            <li>Make name, email, and phone <code>required</code></li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 10.2</div>
+          <h5>Label Accessibility</h5>
+          <p>Study the importance of labels by doing the following:</p>
+          <ol>
+            <li>
+              Create an input without a <code>&lt;label&gt;</code> — click the
+              text next to it and notice it doesn't focus the input
+            </li>
+            <li>
+              Create the same input with a properly linked
+              <code>&lt;label for=""&gt;</code> — now clicking the label focuses
+              the input
+            </li>
+            <li>
+              Write a short explanation of why labels matter for keyboard and
+              screen reader users
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 10</div>
+          <h5>Chapter 10 Knowledge Check</h5>
+          <ol>
+            <li>
+              What are the two most common values for the form
+              <code>method</code> attribute, and when would you use each?
+            </li>
+            <li>What does the <code>required</code> attribute do?</li>
+            <li>
+              What is the difference between radio buttons and checkboxes?
+            </li>
+            <li>
+              How do you link a <code>&lt;label&gt;</code> to an
+              <code>&lt;input&gt;</code>?
+            </li>
+            <li>What is a <code>&lt;fieldset&gt;</code> used for?</li>
+            <li>
+              <strong>Practical:</strong> Build a contact form for a fictional
+              company. Include: name, email, subject (dropdown with 4 options),
+              message (textarea), a newsletter opt-in checkbox, and a submit
+              button. All fields except the newsletter checkbox should be
+              required.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+       LESSON 11 — VIDEO & AUDIO
+  ══════════════════════════════ -->
+      <section class="lesson" id="media">
+        <div class="lesson-header">
+          <div class="lesson-num">Lesson 11</div>
+          <div class="lesson-title-group">
+            <h2>HTML Video & Audio</h2>
+            <span class="subtitle"
+              >Embedding media directly in the browser</span
+            >
+          </div>
+        </div>
+
+        <h3>The &lt;video&gt; Element</h3>
+        <p>
+          HTML5 introduced native video support — no plugins required. The
+          <code>&lt;video&gt;</code> element embeds video directly in the
+          browser.
+        </p>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Basic video --&gt;</span>
+<span class="tag">&lt;video <span class="attr">src</span>=<span class="val">"movie.mp4"</span> <span class="attr">controls</span>&gt;</span>
+  <span class="text-node">Your browser does not support the video tag.</span>
+<span class="tag">&lt;/video&gt;</span>
+
+<span class="comment">&lt;!-- Video with all common attributes --&gt;</span>
+<span class="tag">&lt;video
+  <span class="attr">width</span>=<span class="val">"640"</span>
+  <span class="attr">height</span>=<span class="val">"360"</span>
+  <span class="attr">controls</span>
+  <span class="attr">autoplay</span>
+  <span class="attr">muted</span>
+  <span class="attr">loop</span>
+  <span class="attr">poster</span>=<span class="val">"thumbnail.jpg"</span>
+  <span class="attr">preload</span>=<span class="val">"metadata"</span>
+&gt;</span>
+  <span class="comment">&lt;!-- Multiple sources for browser compatibility --&gt;</span>
+  <span class="tag">&lt;source <span class="attr">src</span>=<span class="val">"movie.mp4"</span> <span class="attr">type</span>=<span class="val">"video/mp4"</span>&gt;</span>
+  <span class="tag">&lt;source <span class="attr">src</span>=<span class="val">"movie.webm"</span> <span class="attr">type</span>=<span class="val">"video/webm"</span>&gt;</span>
+  <span class="text-node">Your browser does not support HTML5 video.</span>
+<span class="tag">&lt;/video&gt;</span></code></pre>
+
+        <h3>The &lt;audio&gt; Element</h3>
+        <pre
+          data-lang="HTML"
+        ><code><span class="comment">&lt;!-- Basic audio player --&gt;</span>
+<span class="tag">&lt;audio <span class="attr">src</span>=<span class="val">"song.mp3"</span> <span class="attr">controls</span>&gt;</span>
+  <span class="text-node">Your browser does not support the audio element.</span>
+<span class="tag">&lt;/audio&gt;</span>
+
+<span class="comment">&lt;!-- Audio with multiple sources --&gt;</span>
+<span class="tag">&lt;audio <span class="attr">controls</span> <span class="attr">autoplay</span> <span class="attr">muted</span> <span class="attr">loop</span>&gt;</span>
+  <span class="tag">&lt;source <span class="attr">src</span>=<span class="val">"song.mp3"</span> <span class="attr">type</span>=<span class="val">"audio/mpeg"</span>&gt;</span>
+  <span class="tag">&lt;source <span class="attr">src</span>=<span class="val">"song.ogg"</span> <span class="attr">type</span>=<span class="val">"audio/ogg"</span>&gt;</span>
+  <span class="text-node">Your browser does not support audio playback.</span>
+<span class="tag">&lt;/audio&gt;</span></code></pre>
+
+        <h3>Embedding YouTube Videos</h3>
+        <p>
+          For YouTube and other hosted videos, use the
+          <code>&lt;iframe&gt;</code> element:
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;iframe
+  <span class="attr">width</span>=<span class="val">"560"</span>
+  <span class="attr">height</span>=<span class="val">"315"</span>
+  <span class="attr">src</span>=<span class="val">"https://www.youtube.com/embed/VIDEO_ID"</span>
+  <span class="attr">title</span>=<span class="val">"YouTube video player"</span>
+  <span class="attr">frameborder</span>=<span class="val">"0"</span>
+  <span class="attr">allow</span>=<span class="val">"accelerometer; autoplay; clipboard-write; encrypted-media"</span>
+  <span class="attr">allowfullscreen</span>
+&gt;&lt;/iframe&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Applies To</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>controls</code></td>
+            <td>video, audio</td>
+            <td>Show play/pause/volume controls</td>
+          </tr>
+          <tr>
+            <td><code>autoplay</code></td>
+            <td>video, audio</td>
+            <td>Start playing automatically (usually muted)</td>
+          </tr>
+          <tr>
+            <td><code>muted</code></td>
+            <td>video, audio</td>
+            <td>Start with no sound</td>
+          </tr>
+          <tr>
+            <td><code>loop</code></td>
+            <td>video, audio</td>
+            <td>Repeat indefinitely</td>
+          </tr>
+          <tr>
+            <td><code>poster</code></td>
+            <td>video</td>
+            <td>Image shown before video plays</td>
+          </tr>
+          <tr>
+            <td><code>preload</code></td>
+            <td>video, audio</td>
+            <td>How much to preload: none, metadata, auto</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-note">
+          <span class="icon">🔇</span>
+          <div class="content">
+            <strong>Autoplay Policy</strong>
+            <p>
+              Most modern browsers block <code>autoplay</code> with sound. If
+              you want a video to autoplay, you must also add
+              <code>muted</code>. This is a user experience protection built
+              into browsers.
+            </p>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 11.1</div>
+          <h5>Media Player Page</h5>
+          <ol>
+            <li>
+              Download a free sample video from
+              <a href="https://sample-videos.com" style="color: var(--accent2)"
+                >sample-videos.com</a
+              >
+            </li>
+            <li>Download a free sample audio file (e.g., a sound effect)</li>
+            <li>
+              Create a page with both a <code>&lt;video&gt;</code> player (with
+              controls, a poster image, and a fallback message) and an
+              <code>&lt;audio&gt;</code> player
+            </li>
+            <li>Set the video to not autoplay but to show controls</li>
+            <li>
+              Wrap each in a <code>&lt;figure&gt;</code> with a
+              <code>&lt;figcaption&gt;</code>
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block exercise">
+          <div class="block-label">✏️ Exercise 11.2</div>
+          <h5>Embed a YouTube Video</h5>
+          <ol>
+            <li>Go to any educational YouTube video</li>
+            <li>Click "Share" → "Embed" and copy the embed code</li>
+            <li>Paste it into an HTML file and open it in your browser</li>
+            <li>
+              Modify the width and height to <code>100%</code> width and
+              <code>400px</code> height
+            </li>
+            <li>
+              Add a heading above the video that describes what it's about
+            </li>
+          </ol>
+        </div>
+
+        <div class="exercise-block assessment">
+          <div class="block-label">📝 Assessment 11</div>
+          <h5>Chapter 11 Knowledge Check</h5>
+          <ol>
+            <li>
+              What attribute is required to show video/audio controls to the
+              user?
+            </li>
+            <li>
+              Why do we provide multiple <code>&lt;source&gt;</code> elements
+              inside a video tag?
+            </li>
+            <li>What does the <code>poster</code> attribute do?</li>
+            <li>
+              Why must <code>autoplay</code> usually be combined with
+              <code>muted</code>?
+            </li>
+            <li>
+              What is the difference between using a
+              <code>&lt;video&gt;</code> tag and an
+              <code>&lt;iframe&gt;</code> for video?
+            </li>
+            <li>
+              <strong>Practical:</strong> Create a "Media Hub" page that
+              includes: a self-hosted video with controls, poster, and loop; an
+              audio player for background music with controls; and an embedded
+              YouTube video of your choice. Add appropriate headings and
+              captions for each.
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <button
+      id="scrolltop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      title="Back to top"
+    >
+      ↑
+    </button>
+
+    <script>
+      // Progress bar
+      const progress = document.getElementById("progress");
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        progress.style.width = (scrollTop / docHeight) * 100 + "%";
+
+        // Scroll to top button
+        document
+          .getElementById("scrolltop")
+          .classList.toggle("visible", scrollTop > 400);
+
+        // Active nav link
+        const sections = document.querySelectorAll(".lesson");
+        const links = document.querySelectorAll(".nav-link");
+        sections.forEach((s, i) => {
+          const rect = s.getBoundingClientRect();
+          if (rect.top <= 200 && rect.bottom >= 200) {
+            links.forEach((l) => l.classList.remove("active"));
+            if (links[i]) links[i].classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
