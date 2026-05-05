@@ -41,6 +41,8 @@
       <a class="nav-link" href="#semantic"
         ><span class="nav-num">06</span> Semantic Elements</a
       >
+      <a class="nav-link nav-sub" href="#div-span">↳ Div &amp; Span</a>
+      <a class="nav-link nav-sub" href="#block-inline">↳ Block &amp; Inline</a>
       <a class="nav-link" href="#lists"
         ><span class="nav-num">07</span> HTML Lists</a
       >
@@ -53,9 +55,15 @@
       <a class="nav-link" href="#forms"
         ><span class="nav-num">10</span> HTML Forms</a
       >
+      <a class="nav-link nav-sub" href="#form-attributes">↳ Form Attributes</a>
+      <a class="nav-link nav-sub" href="#form-elements">↳ Form Elements</a>
+      <a class="nav-link nav-sub" href="#input-types">↳ Input Types</a>
+      <a class="nav-link nav-sub" href="#input-attributes">↳ Input Attributes</a>
+      <a class="nav-link nav-sub" href="#input-form-attributes">↳ Input Form Attributes</a>
       <a class="nav-link" href="#media"
         ><span class="nav-num">11</span> Video & Audio</a
       >
+      <a class="nav-link nav-sub" href="#iframes">↳ HTML Iframes</a>
     </nav>
 
     <!-- Main -->
@@ -987,6 +995,149 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
 <span class="comment">&lt;!-- span: inline container, stays within text flow --&gt;</span>
 <span class="tag">&lt;p&gt;</span><span class="text-node">The price is </span><span class="tag">&lt;span <span class="attr">style</span>=<span class="val">"color: red;"</span>&gt;</span><span class="text-node">₦5,000</span><span class="tag">&lt;/span&gt;</span><span class="text-node"> only.</span><span class="tag">&lt;/p&gt;</span></code></pre>
 
+        <!-- ─── Sub-topic: Div & Span ─── -->
+        <div id="div-span" class="subtopic-anchor"></div>
+        <h3>HTML &lt;div&gt; and &lt;span&gt; Elements</h3>
+        <p>
+          <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are
+          <strong>generic containers</strong> — they carry no semantic meaning
+          on their own. They exist purely to group content so you can style or
+          manipulate it with CSS and JavaScript.
+        </p>
+
+        <h4>The &lt;div&gt; Element</h4>
+        <p>
+          <code>&lt;div&gt;</code> is a <strong>block-level</strong> container.
+          It starts on a new line and stretches the full width of its parent.
+          Use it to group larger sections of content.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- Grouping a card component --&gt;</span>
+<span class="tag">&lt;div <span class="attr">class</span>=<span class="val">"card"</span>&gt;</span>
+  <span class="tag">&lt;h2&gt;</span><span class="text-node">Card Title</span><span class="tag">&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="text-node">Card description goes here.</span><span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;a <span class="attr">href</span>=<span class="val">"#"</span>&gt;</span><span class="text-node">Read more</span><span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Wrapping a layout column --&gt;</span>
+<span class="tag">&lt;div <span class="attr">class</span>=<span class="val">"column"</span>&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="text-node">Left column content.</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="attr">class</span>=<span class="val">"column"</span>&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="text-node">Right column content.</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+
+        <h4>The &lt;span&gt; Element</h4>
+        <p>
+          <code>&lt;span&gt;</code> is an <strong>inline</strong> container. It
+          sits within a line of text without breaking the flow. Use it to style
+          or target a specific word or phrase.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- Highlighting a word inside a paragraph --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">The price is </span><span class="tag">&lt;span <span class="attr">style</span>=<span class="val">"color: green; font-weight: bold;"</span>&gt;</span><span class="text-node">₦5,000</span><span class="tag">&lt;/span&gt;</span><span class="text-node"> only.</span><span class="tag">&lt;/p&gt;</span>
+
+<span class="comment">&lt;!-- Applying a class to part of a sentence --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">Status: </span><span class="tag">&lt;span <span class="attr">class</span>=<span class="val">"badge-active"</span>&gt;</span><span class="text-node">Active</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/p&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Element</th>
+            <th>Type</th>
+            <th>Use For</th>
+          </tr>
+          <tr>
+            <td><code>&lt;div&gt;</code></td>
+            <td>Block</td>
+            <td>Grouping sections, layout wrappers, card components</td>
+          </tr>
+          <tr>
+            <td><code>&lt;span&gt;</code></td>
+            <td>Inline</td>
+            <td>Styling words/phrases within text, badges, labels</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-tip">
+          <span class="icon">✅</span>
+          <div class="content">
+            <strong>Prefer semantic elements first</strong>
+            <p>
+              Before reaching for <code>&lt;div&gt;</code>, ask if a semantic
+              element fits — <code>&lt;article&gt;</code>,
+              <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, etc. Use
+              <code>&lt;div&gt;</code> only when no semantic element applies.
+            </p>
+          </div>
+        </div>
+
+        <!-- ─── Sub-topic: Block & Inline ─── -->
+        <div id="block-inline" class="subtopic-anchor"></div>
+        <h3>HTML Block and Inline Elements</h3>
+        <p>
+          Every HTML element has a default <strong>display type</strong> — either
+          <strong>block</strong> or <strong>inline</strong>. Understanding this
+          is fundamental to controlling page layout.
+        </p>
+
+        <h4>Block-Level Elements</h4>
+        <p>
+          A <strong>block element</strong> always starts on a new line and takes
+          up the full width available. Block elements stack vertically on top of
+          each other.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- These all start on a new line --&gt;</span>
+<span class="tag">&lt;div&gt;</span><span class="text-node">I am a block element</span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">So am I</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;h1&gt;</span><span class="text-node">And me</span><span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;ul&gt;</span><span class="text-node">Me too</span><span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;section&gt;</span><span class="text-node">And me</span><span class="tag">&lt;/section&gt;</span></code></pre>
+
+        <h4>Inline Elements</h4>
+        <p>
+          An <strong>inline element</strong> does not start on a new line. It
+          only takes up as much width as its content needs, flowing within the
+          surrounding text.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- These stay within the text flow --&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="text-node">This is </span><span class="tag">&lt;strong&gt;</span><span class="text-node">bold</span><span class="tag">&lt;/strong&gt;</span><span class="text-node">, this is </span><span class="tag">&lt;em&gt;</span><span class="text-node">italic</span><span class="tag">&lt;/em&gt;</span><span class="text-node">, and this is a </span><span class="tag">&lt;a <span class="attr">href</span>=<span class="val">"#"</span>&gt;</span><span class="text-node">link</span><span class="tag">&lt;/a&gt;</span><span class="text-node">.</span><span class="tag">&lt;/p&gt;</span>
+<span class="comment">&lt;!-- span, img, input, label, code, abbr are also inline --&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Block Elements</th>
+            <th>Inline Elements</th>
+          </tr>
+          <tr>
+            <td><code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code></td>
+            <td><code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></td>
+            <td><code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code></td>
+            <td><code>&lt;label&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;abbr&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;table&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;footer&gt;</code></td>
+            <td><code>&lt;mark&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code></td>
+          </tr>
+        </table>
+
+        <div class="info-box info-note">
+          <span class="icon">💡</span>
+          <div class="content">
+            <strong>CSS can change display type</strong>
+            <p>
+              You can override the default display with CSS:
+              <code>display: block</code>, <code>display: inline</code>, or
+              <code>display: inline-block</code>. For example, making
+              <code>&lt;a&gt;</code> tags block-level is common for navigation
+              buttons.
+            </p>
+          </div>
+        </div>
+
         <table class="ref-table">
           <tr>
             <th>Element</th>
@@ -1417,6 +1568,42 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
           </div>
         </div>
 
+        <h3>What is an HTML Table?</h3>
+        <p>
+          An <strong>HTML table</strong> is used to display data arranged in
+          <strong>rows</strong> and <strong>columns</strong> — like a
+          spreadsheet. Tables are ideal for structured, relational data such as
+          schedules, scores, pricing plans, and comparison charts.
+        </p>
+        <p>
+          A table is built from the outside in: first the
+          <code>&lt;table&gt;</code> wrapper, then semantic sections
+          (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+          <code>&lt;tfoot&gt;</code>), then rows (<code>&lt;tr&gt;</code>), and
+          finally individual cells (<code>&lt;th&gt;</code> or
+          <code>&lt;td&gt;</code>).
+        </p>
+
+        <h4>Key Definitions</h4>
+        <dl class="def-list">
+          <dt><code>&lt;table&gt;</code></dt>
+          <dd>The outer container that wraps the entire table.</dd>
+          <dt><code>&lt;thead&gt;</code></dt>
+          <dd>The header section — holds the column label row(s). Browsers may repeat this when printing long tables.</dd>
+          <dt><code>&lt;tbody&gt;</code></dt>
+          <dd>The body section — holds all the main data rows.</dd>
+          <dt><code>&lt;tfoot&gt;</code></dt>
+          <dd>The footer section — typically holds totals, averages, or summary rows.</dd>
+          <dt><code>&lt;tr&gt;</code> (Table Row)</dt>
+          <dd>Defines a single horizontal row inside any table section.</dd>
+          <dt><code>&lt;th&gt;</code> (Table Header cell)</dt>
+          <dd>A header cell — bold and centred by default. Use inside <code>&lt;thead&gt;</code> to label columns.</dd>
+          <dt><code>&lt;td&gt;</code> (Table Data cell)</dt>
+          <dd>A regular data cell — left-aligned by default. Used inside <code>&lt;tbody&gt;</code> and <code>&lt;tfoot&gt;</code>.</dd>
+          <dt><code>&lt;caption&gt;</code></dt>
+          <dd>An optional title placed directly after the opening <code>&lt;table&gt;</code> tag. Improves accessibility.</dd>
+        </dl>
+
         <h3>Basic Table Structure</h3>
         <pre data-lang="HTML"><code><span class="tag">&lt;table&gt;</span>
 
@@ -1457,17 +1644,82 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
 <span class="tag">&lt;/table&gt;</span></code></pre>
 
         <h3>Spanning Cells</h3>
-        <pre
-          data-lang="HTML"
-        ><code><span class="comment">&lt;!-- colspan: merge cells horizontally --&gt;</span>
+        <p>
+          Sometimes a single cell needs to stretch across multiple columns or
+          rows. Use <code>colspan</code> to merge horizontally and
+          <code>rowspan</code> to merge vertically.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- colspan: merge cells horizontally --&gt;</span>
 <span class="tag">&lt;td <span class="attr">colspan</span>=<span class="val">"3"</span>&gt;</span><span class="text-node">This cell spans 3 columns</span><span class="tag">&lt;/td&gt;</span>
 
 <span class="comment">&lt;!-- rowspan: merge cells vertically --&gt;</span>
-<span class="tag">&lt;td <span class="attr">rowspan</span>=<span class="val">"2"</span>&gt;</span><span class="text-node">This cell spans 2 rows</span><span class="tag">&lt;/td&gt;</span></code></pre>
+<span class="tag">&lt;td <span class="attr">rowspan</span>=<span class="val">"2"</span>&gt;</span><span class="text-node">This cell spans 2 rows</span><span class="tag">&lt;/td&gt;</span>
+
+<span class="comment">&lt;!-- Real-world example: a "Break" row spanning all 5 day columns --&gt;</span>
+<span class="tag">&lt;tr&gt;</span>
+  <span class="tag">&lt;td&gt;</span><span class="text-node">10:00</span><span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;td <span class="attr">colspan</span>=<span class="val">"5"</span>&gt;</span><span class="text-node">☕ Break</span><span class="tag">&lt;/td&gt;</span>
+<span class="tag">&lt;/tr&gt;</span></code></pre>
+
+        <h3>The scope Attribute — Accessibility</h3>
+        <p>
+          The <code>scope</code> attribute on <code>&lt;th&gt;</code> tells
+          screen readers whether a header applies to a column or a row. This is
+          important for accessibility.
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;thead&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"col"</span>&gt;</span><span class="text-node">Name</span><span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"col"</span>&gt;</span><span class="text-node">Score</span><span class="tag">&lt;/th&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/thead&gt;</span>
+<span class="tag">&lt;tbody&gt;</span>
+  <span class="tag">&lt;tr&gt;</span>
+    <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"row"</span>&gt;</span><span class="text-node">Amara</span><span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;td&gt;</span><span class="text-node">92</span><span class="tag">&lt;/td&gt;</span>
+  <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/tbody&gt;</span></code></pre>
+
+        <h3>Complete Table Example</h3>
+        <pre data-lang="HTML"><code><span class="tag">&lt;table&gt;</span>
+  <span class="tag">&lt;caption&gt;</span><span class="text-node">Student Scores — Term 1</span><span class="tag">&lt;/caption&gt;</span>
+
+  <span class="tag">&lt;thead&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"col"</span>&gt;</span><span class="text-node">Name</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"col"</span>&gt;</span><span class="text-node">Maths</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"col"</span>&gt;</span><span class="text-node">English</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"col"</span>&gt;</span><span class="text-node">Average</span><span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/thead&gt;</span>
+
+  <span class="tag">&lt;tbody&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"row"</span>&gt;</span><span class="text-node">Amara</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">92</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">88</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">90</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;th <span class="attr">scope</span>=<span class="val">"row"</span>&gt;</span><span class="text-node">Chidi</span><span class="tag">&lt;/th&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">78</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">85</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">81.5</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tbody&gt;</span>
+
+  <span class="tag">&lt;tfoot&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+      <span class="tag">&lt;td <span class="attr">colspan</span>=<span class="val">"2"</span>&gt;</span><span class="text-node">Class Average</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">85</span><span class="tag">&lt;/td&gt;</span>
+      <span class="tag">&lt;td&gt;</span><span class="text-node">86.5</span><span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+  <span class="tag">&lt;/tfoot&gt;</span>
+<span class="tag">&lt;/table&gt;</span></code></pre>
 
         <table class="ref-table">
           <tr>
-            <th>Tag</th>
+            <th>Tag / Attribute</th>
             <th>Meaning</th>
           </tr>
           <tr>
@@ -1475,43 +1727,68 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
             <td>The table container</td>
           </tr>
           <tr>
+            <td><code>&lt;caption&gt;</code></td>
+            <td>Table title — placed right after <code>&lt;table&gt;</code></td>
+          </tr>
+          <tr>
             <td><code>&lt;thead&gt;</code></td>
-            <td>Table header section</td>
+            <td>Table header section — column labels</td>
           </tr>
           <tr>
             <td><code>&lt;tbody&gt;</code></td>
-            <td>Table body (main data)</td>
+            <td>Table body — main data rows</td>
           </tr>
           <tr>
             <td><code>&lt;tfoot&gt;</code></td>
-            <td>Table footer (summaries/totals)</td>
+            <td>Table footer — summaries and totals</td>
           </tr>
           <tr>
             <td><code>&lt;tr&gt;</code></td>
-            <td>Table row</td>
+            <td>A single table row</td>
           </tr>
           <tr>
             <td><code>&lt;th&gt;</code></td>
-            <td>Table header cell (bold, centred by default)</td>
+            <td>Header cell — bold, centred by default</td>
           </tr>
           <tr>
             <td><code>&lt;td&gt;</code></td>
-            <td>Table data cell</td>
+            <td>Data cell — regular text, left-aligned</td>
           </tr>
           <tr>
-            <td><code>&lt;caption&gt;</code></td>
-            <td>Table title/caption</td>
+            <td><code>colspan="n"</code></td>
+            <td>Merge a cell across <em>n</em> columns</td>
+          </tr>
+          <tr>
+            <td><code>rowspan="n"</code></td>
+            <td>Merge a cell across <em>n</em> rows</td>
+          </tr>
+          <tr>
+            <td><code>scope="col|row"</code></td>
+            <td>Accessibility — tells screen readers what the header applies to</td>
           </tr>
         </table>
 
         <div class="info-box info-note">
           <span class="icon">💡</span>
           <div class="content">
-            <strong>Remember</strong>
+            <strong>Tables are for data, not layout</strong>
             <p>
               HTML tables are for <em>tabular data only</em>. Never use tables
-              for page layout — use semantic elements and CSS instead. This was
-              a common mistake in early web development.
+              for page layout — use semantic elements and CSS Flexbox or Grid
+              instead. Using tables for layout was a common mistake in early web
+              development and breaks accessibility.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box info-tip">
+          <span class="icon">✅</span>
+          <div class="content">
+            <strong>When to use a table</strong>
+            <p>
+              Ask yourself: "Would this data make sense in a spreadsheet?" If
+              yes — use a table. Examples: exam results, timetables, pricing
+              plans, sports standings, comparison charts.
             </p>
           </div>
         </div>
@@ -1521,20 +1798,13 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
         <div class="exercise-block exercise">
           <div class="block-label">✏️ Exercise 9.1</div>
           <h5>Timetable Table</h5>
-          <p>
-            Create a school timetable for Monday–Friday using an HTML table:
-          </p>
+          <p>Create a school timetable for Monday–Friday using an HTML table:</p>
           <ol>
-            <li>
-              Use <code>&lt;thead&gt;</code> with column headers: Time, Monday,
-              Tuesday, Wednesday, Thursday, Friday
-            </li>
+            <li>Use <code>&lt;thead&gt;</code> with column headers: Time, Monday, Tuesday, Wednesday, Thursday, Friday</li>
             <li>Add at least 4 time slots in the <code>&lt;tbody&gt;</code></li>
-            <li>
-              Use <code>colspan</code> for at least one "Break" row that spans
-              all days
-            </li>
+            <li>Use <code>colspan</code> for at least one "Break" row that spans all days</li>
             <li>Add a <code>&lt;caption&gt;</code> for the table</li>
+            <li>Add <code>scope="col"</code> to all header cells</li>
           </ol>
         </div>
 
@@ -1544,8 +1814,9 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
           <p>
             Create a pricing comparison table for 3 subscription plans (Basic,
             Pro, Enterprise) with the following rows: Price, Storage, Users,
-            Support, and a "Recommended" row merged across all three using
-            <code>colspan</code> for one plan.
+            Support. Use <code>colspan</code> to add a "Most Popular" label
+            spanning the Pro column header. Include a <code>&lt;tfoot&gt;</code>
+            row with a "Get Started" note.
           </p>
         </div>
 
@@ -1554,10 +1825,7 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
           <h5>Chapter 9 Knowledge Check</h5>
           <ol>
             <li>What are the three semantic sections of a table?</li>
-            <li>
-              What is the difference between <code>&lt;th&gt;</code> and
-              <code>&lt;td&gt;</code>?
-            </li>
+            <li>What is the difference between <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code>?</li>
             <li>What does <code>colspan="3"</code> do to a cell?</li>
             <li>What is <code>&lt;caption&gt;</code> used for?</li>
             <li>Why should tables not be used for page layout?</li>
@@ -1570,6 +1838,94 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
             </li>
           </ol>
         </div>
+
+        <!-- ── Quiz 9 ── -->
+        <hr class="section-divider" />
+        <div class="quiz-block">
+          <div class="quiz-label">🧠 Quiz — Lesson 9: HTML Tables</div>
+          <p class="quiz-intro">Choose the correct answer for each question. Click <strong>Show Answer</strong> to reveal the result.</p>
+
+          <!-- Q1 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">1.</span> Which tag defines a <strong>header cell</strong> in an HTML table?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="t9q1" value="a"> <span>&lt;td&gt;</span></label>
+              <label class="q-option"><input type="radio" name="t9q1" value="b"> <span>&lt;th&gt;</span></label>
+              <label class="q-option"><input type="radio" name="t9q1" value="c"> <span>&lt;tr&gt;</span></label>
+              <label class="q-option"><input type="radio" name="t9q1" value="d"> <span>&lt;thead&gt;</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 't9q1')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — <code>&lt;th&gt;</code></span>
+              <p><strong>Definition:</strong> <code>&lt;th&gt;</code> (Table Header cell) creates a header cell that is bold and centred by default. It is used inside <code>&lt;thead&gt;</code> to label columns, or inside <code>&lt;tbody&gt;</code> rows with <code>scope="row"</code> to label rows.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">2.</span> What does <code>colspan="3"</code> do to a table cell?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="t9q2" value="a"> <span>Makes the cell 3 times taller</span></label>
+              <label class="q-option"><input type="radio" name="t9q2" value="b"> <span>Merges the cell across 3 rows</span></label>
+              <label class="q-option"><input type="radio" name="t9q2" value="c"> <span>Merges the cell across 3 columns</span></label>
+              <label class="q-option"><input type="radio" name="t9q2" value="d"> <span>Adds 3 pixels of padding</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'c', 't9q2')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: C — Merges the cell across 3 columns</span>
+              <p><strong>Definition:</strong> <code>colspan</code> (column span) is an attribute that makes a single cell stretch horizontally across the specified number of columns. Use <code>rowspan</code> to stretch vertically across rows.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">3.</span> Which section of a table is best suited for totals and summary rows?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="t9q3" value="a"> <span>&lt;thead&gt;</span></label>
+              <label class="q-option"><input type="radio" name="t9q3" value="b"> <span>&lt;tbody&gt;</span></label>
+              <label class="q-option"><input type="radio" name="t9q3" value="c"> <span>&lt;tfoot&gt;</span></label>
+              <label class="q-option"><input type="radio" name="t9q3" value="d"> <span>&lt;caption&gt;</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'c', 't9q3')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: C — <code>&lt;tfoot&gt;</code></span>
+              <p><strong>Definition:</strong> <code>&lt;tfoot&gt;</code> (Table Footer) is the semantic section for summary data — totals, averages, or notes. Browsers may render it at the bottom even if it appears before <code>&lt;tbody&gt;</code> in the HTML source.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">4.</span> What is the purpose of the <code>&lt;caption&gt;</code> element?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="t9q4" value="a"> <span>It styles the table with a border</span></label>
+              <label class="q-option"><input type="radio" name="t9q4" value="b"> <span>It provides a visible title and improves accessibility</span></label>
+              <label class="q-option"><input type="radio" name="t9q4" value="c"> <span>It merges the first row of the table</span></label>
+              <label class="q-option"><input type="radio" name="t9q4" value="d"> <span>It defines the table's column count</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 't9q4')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — It provides a visible title and improves accessibility</span>
+              <p><strong>Definition:</strong> <code>&lt;caption&gt;</code> is placed immediately after the opening <code>&lt;table&gt;</code> tag. It renders as a centred title above the table and is announced by screen readers, helping users understand what the table contains before reading it.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">5.</span> Why should HTML tables <strong>not</strong> be used for page layout?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="t9q5" value="a"> <span>Tables are too slow to render</span></label>
+              <label class="q-option"><input type="radio" name="t9q5" value="b"> <span>Tables can only have 10 columns</span></label>
+              <label class="q-option"><input type="radio" name="t9q5" value="c"> <span>Tables break accessibility and mix structure with presentation</span></label>
+              <label class="q-option"><input type="radio" name="t9q5" value="d"> <span>Tables are not supported in HTML5</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'c', 't9q5')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: C — Tables break accessibility and mix structure with presentation</span>
+              <p><strong>Definition:</strong> Using tables for layout confuses screen readers (which expect tables to contain data), makes the HTML harder to maintain, and breaks responsive design. CSS Flexbox and CSS Grid are the correct tools for page layout.</p>
+            </div>
+          </div>
+
+        </div><!-- end quiz-block -->
       </section>
 
       <!-- ══════════════════════════════
@@ -1584,6 +1940,42 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
           </div>
         </div>
 
+        <h3>What is an HTML Form?</h3>
+        <p>
+          An <strong>HTML form</strong> is a section of a webpage that collects
+          input from the user and sends it to a server for processing. Forms are
+          used everywhere — login pages, registration, search bars, checkout
+          flows, contact pages, and surveys.
+        </p>
+        <p>
+          Every form is built around the <code>&lt;form&gt;</code> element,
+          which acts as a container. Inside it you place various
+          <strong>input controls</strong> — text fields, dropdowns, checkboxes,
+          radio buttons, and buttons.
+        </p>
+
+        <h4>Key Definitions</h4>
+        <dl class="def-list">
+          <dt><code>&lt;form&gt;</code></dt>
+          <dd>The container element for all form controls. Its <code>action</code> attribute sets the URL that receives the data, and <code>method</code> sets how it is sent (GET or POST).</dd>
+          <dt><code>&lt;input&gt;</code></dt>
+          <dd>A self-closing element that creates many types of form controls depending on its <code>type</code> attribute — text, email, password, checkbox, radio, file, date, and more.</dd>
+          <dt><code>&lt;label&gt;</code></dt>
+          <dd>Provides a visible, clickable description for an input. Linked to an input via matching <code>for</code> and <code>id</code> values. Essential for accessibility.</dd>
+          <dt><code>&lt;textarea&gt;</code></dt>
+          <dd>A multi-line text input. Unlike <code>&lt;input&gt;</code>, it has an opening and closing tag. Use <code>rows</code> and <code>cols</code> to set its size.</dd>
+          <dt><code>&lt;select&gt;</code> and <code>&lt;option&gt;</code></dt>
+          <dd>Creates a dropdown menu. Each choice is an <code>&lt;option&gt;</code> element inside the <code>&lt;select&gt;</code>.</dd>
+          <dt><code>&lt;button&gt;</code></dt>
+          <dd>A clickable button. <code>type="submit"</code> submits the form, <code>type="reset"</code> clears all fields, <code>type="button"</code> does nothing by default (used with JavaScript).</dd>
+          <dt><code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></dt>
+          <dd><code>&lt;fieldset&gt;</code> groups related form controls with a visible border. <code>&lt;legend&gt;</code> provides a title for the group. Both improve accessibility and organisation.</dd>
+          <dt><code>required</code></dt>
+          <dd>A boolean attribute that prevents form submission if the field is empty. The browser shows a built-in validation message.</dd>
+          <dt><code>placeholder</code></dt>
+          <dd>Hint text shown inside an input when it is empty. It disappears when the user starts typing. Do not use it as a replacement for a <code>&lt;label&gt;</code>.</dd>
+        </dl>
+
         <h3>The &lt;form&gt; Element</h3>
         <p>
           Forms allow users to enter data that is sent to a server. The
@@ -1596,7 +1988,89 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
   <span class="comment">&lt;!-- Form fields go here --&gt;</span>
 <span class="tag">&lt;/form&gt;</span></code></pre>
 
+        <!-- ─── Sub-topic: HTML Form Attributes ─── -->
+        <div id="form-attributes" class="subtopic-anchor"></div>
+        <h3>HTML Form Attributes</h3>
+        <p>
+          The <code>&lt;form&gt;</code> element supports several attributes that
+          control how and where data is submitted.
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;form
+  <span class="attr">action</span>=<span class="val">"/register"</span>
+  <span class="attr">method</span>=<span class="val">"post"</span>
+  <span class="attr">enctype</span>=<span class="val">"multipart/form-data"</span>
+  <span class="attr">target</span>=<span class="val">"_blank"</span>
+  <span class="attr">autocomplete</span>=<span class="val">"on"</span>
+  <span class="attr">novalidate</span>
+&gt;</span>
+  <span class="comment">&lt;!-- form fields --&gt;</span>
+<span class="tag">&lt;/form&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>action</code></td>
+            <td>URL where form data is sent on submission</td>
+            <td><code>action="/submit"</code></td>
+          </tr>
+          <tr>
+            <td><code>method</code></td>
+            <td>HTTP method: <code>get</code> or <code>post</code></td>
+            <td><code>method="post"</code></td>
+          </tr>
+          <tr>
+            <td><code>enctype</code></td>
+            <td>Encoding type — use <code>multipart/form-data</code> for file uploads</td>
+            <td><code>enctype="multipart/form-data"</code></td>
+          </tr>
+          <tr>
+            <td><code>target</code></td>
+            <td>Where to display the response (<code>_self</code>, <code>_blank</code>)</td>
+            <td><code>target="_blank"</code></td>
+          </tr>
+          <tr>
+            <td><code>autocomplete</code></td>
+            <td>Enable/disable browser autocomplete for the form</td>
+            <td><code>autocomplete="off"</code></td>
+          </tr>
+          <tr>
+            <td><code>novalidate</code></td>
+            <td>Disables HTML5 built-in validation on submission</td>
+            <td><code>novalidate</code></td>
+          </tr>
+          <tr>
+            <td><code>name</code></td>
+            <td>Name of the form (used by JavaScript to reference it)</td>
+            <td><code>name="loginForm"</code></td>
+          </tr>
+        </table>
+
+        <h4>GET vs POST</h4>
+        <table class="ref-table">
+          <tr>
+            <th>Method</th>
+            <th>How data is sent</th>
+            <th>Use when…</th>
+          </tr>
+          <tr>
+            <td><code>GET</code></td>
+            <td>Appended to the URL as query parameters</td>
+            <td>Searching, filtering — data is not sensitive</td>
+          </tr>
+          <tr>
+            <td><code>POST</code></td>
+            <td>Sent in the request body (not visible in URL)</td>
+            <td>Login, registration, payments — data is sensitive</td>
+          </tr>
+        </table>
+
         <h3>Input Types</h3>
+        <!-- ─── Sub-topic: HTML Input Types ─── -->
+        <div id="input-types" class="subtopic-anchor"></div>
         <pre
           data-lang="HTML"
         ><code><span class="comment">&lt;!-- Text input --&gt;</span>
@@ -1638,6 +2112,255 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
 <span class="comment">&lt;!-- Submit button --&gt;</span>
 <span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"submit"</span> <span class="attr">value</span>=<span class="val">"Submit Form"</span>&gt;</span></code></pre>
 
+        <table class="ref-table">
+          <tr>
+            <th>Input Type</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>type="text"</code></td>
+            <td>Single-line plain text input</td>
+          </tr>
+          <tr>
+            <td><code>type="email"</code></td>
+            <td>Email address — validates format automatically</td>
+          </tr>
+          <tr>
+            <td><code>type="password"</code></td>
+            <td>Masked text input for passwords</td>
+          </tr>
+          <tr>
+            <td><code>type="number"</code></td>
+            <td>Numeric input with optional <code>min</code>, <code>max</code>, <code>step</code></td>
+          </tr>
+          <tr>
+            <td><code>type="date"</code></td>
+            <td>Date picker (year, month, day)</td>
+          </tr>
+          <tr>
+            <td><code>type="time"</code></td>
+            <td>Time picker (hours and minutes)</td>
+          </tr>
+          <tr>
+            <td><code>type="tel"</code></td>
+            <td>Telephone number — shows numeric keyboard on mobile</td>
+          </tr>
+          <tr>
+            <td><code>type="url"</code></td>
+            <td>URL input — validates that the value is a valid URL</td>
+          </tr>
+          <tr>
+            <td><code>type="radio"</code></td>
+            <td>One choice from a group (same <code>name</code>)</td>
+          </tr>
+          <tr>
+            <td><code>type="checkbox"</code></td>
+            <td>Multiple independent on/off choices</td>
+          </tr>
+          <tr>
+            <td><code>type="file"</code></td>
+            <td>File upload — use with <code>enctype="multipart/form-data"</code></td>
+          </tr>
+          <tr>
+            <td><code>type="color"</code></td>
+            <td>Colour picker widget</td>
+          </tr>
+          <tr>
+            <td><code>type="range"</code></td>
+            <td>Slider for a numeric range</td>
+          </tr>
+          <tr>
+            <td><code>type="search"</code></td>
+            <td>Search field — may show a clear button in some browsers</td>
+          </tr>
+          <tr>
+            <td><code>type="hidden"</code></td>
+            <td>Not visible to the user — sends data silently with the form</td>
+          </tr>
+          <tr>
+            <td><code>type="submit"</code></td>
+            <td>Button that submits the form</td>
+          </tr>
+          <tr>
+            <td><code>type="reset"</code></td>
+            <td>Button that resets all form fields to their default values</td>
+          </tr>
+          <tr>
+            <td><code>type="button"</code></td>
+            <td>Generic button — no default action (used with JavaScript)</td>
+          </tr>
+        </table>
+
+        <!-- ─── Sub-topic: HTML Input Attributes ─── -->
+        <div id="input-attributes" class="subtopic-anchor"></div>
+        <h3>HTML Input Attributes</h3>
+        <p>
+          Input attributes control the behaviour, appearance, and validation of
+          individual <code>&lt;input&gt;</code> elements.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- Common input attributes in action --&gt;</span>
+<span class="tag">&lt;input
+  <span class="attr">type</span>=<span class="val">"text"</span>
+  <span class="attr">id</span>=<span class="val">"username"</span>
+  <span class="attr">name</span>=<span class="val">"username"</span>
+  <span class="attr">value</span>=<span class="val">"JohnDoe"</span>
+  <span class="attr">placeholder</span>=<span class="val">"Enter username"</span>
+  <span class="attr">required</span>
+  <span class="attr">readonly</span>
+  <span class="attr">disabled</span>
+  <span class="attr">maxlength</span>=<span class="val">"20"</span>
+  <span class="attr">size</span>=<span class="val">"30"</span>
+  <span class="attr">autocomplete</span>=<span class="val">"username"</span>
+  <span class="attr">autofocus</span>
+&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>value</code></td>
+            <td>Sets the default/initial value of the input</td>
+          </tr>
+          <tr>
+            <td><code>placeholder</code></td>
+            <td>Hint text shown when the field is empty</td>
+          </tr>
+          <tr>
+            <td><code>required</code></td>
+            <td>Field must be filled before the form can be submitted</td>
+          </tr>
+          <tr>
+            <td><code>readonly</code></td>
+            <td>User can see but not edit the value; it is still submitted</td>
+          </tr>
+          <tr>
+            <td><code>disabled</code></td>
+            <td>Field is greyed out and not submitted with the form</td>
+          </tr>
+          <tr>
+            <td><code>maxlength</code></td>
+            <td>Maximum number of characters allowed</td>
+          </tr>
+          <tr>
+            <td><code>minlength</code></td>
+            <td>Minimum number of characters required</td>
+          </tr>
+          <tr>
+            <td><code>min</code> / <code>max</code></td>
+            <td>Minimum and maximum values for number, date, range inputs</td>
+          </tr>
+          <tr>
+            <td><code>step</code></td>
+            <td>Increment interval for number and range inputs</td>
+          </tr>
+          <tr>
+            <td><code>pattern</code></td>
+            <td>Regular expression the value must match</td>
+          </tr>
+          <tr>
+            <td><code>size</code></td>
+            <td>Visible width of the input in characters</td>
+          </tr>
+          <tr>
+            <td><code>autocomplete</code></td>
+            <td>Hints to the browser what type of data to autofill</td>
+          </tr>
+          <tr>
+            <td><code>autofocus</code></td>
+            <td>Automatically focuses this input when the page loads</td>
+          </tr>
+          <tr>
+            <td><code>multiple</code></td>
+            <td>Allows multiple values (for email and file inputs)</td>
+          </tr>
+          <tr>
+            <td><code>accept</code></td>
+            <td>Filters file types for <code>type="file"</code> (e.g., <code>.jpg,.png</code>)</td>
+          </tr>
+          <tr>
+            <td><code>checked</code></td>
+            <td>Pre-selects a checkbox or radio button</td>
+          </tr>
+        </table>
+
+        <!-- ─── Sub-topic: Input Form Attributes ─── -->
+        <div id="input-form-attributes" class="subtopic-anchor"></div>
+        <h3>Input Form Attributes</h3>
+        <p>
+          These attributes allow an <code>&lt;input&gt;</code> element placed
+          <em>outside</em> a <code>&lt;form&gt;</code> tag to still be
+          associated with and submitted by that form. They can also override
+          form-level settings for a specific input.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- A form defined elsewhere on the page --&gt;</span>
+<span class="tag">&lt;form <span class="attr">id</span>=<span class="val">"myForm"</span> <span class="attr">action</span>=<span class="val">"/submit"</span> <span class="attr">method</span>=<span class="val">"post"</span>&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">name</span>=<span class="val">"username"</span>&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+
+<span class="comment">&lt;!-- Input OUTSIDE the form, but linked to it via form="myForm" --&gt;</span>
+<span class="tag">&lt;input
+  <span class="attr">type</span>=<span class="val">"email"</span>
+  <span class="attr">name</span>=<span class="val">"email"</span>
+  <span class="attr">form</span>=<span class="val">"myForm"</span>
+&gt;</span>
+
+<span class="comment">&lt;!-- Override the form's action and method for this submit button only --&gt;</span>
+<span class="tag">&lt;button
+  <span class="attr">type</span>=<span class="val">"submit"</span>
+  <span class="attr">form</span>=<span class="val">"myForm"</span>
+  <span class="attr">formaction</span>=<span class="val">"/save-draft"</span>
+  <span class="attr">formmethod</span>=<span class="val">"post"</span>
+  <span class="attr">formenctype</span>=<span class="val">"multipart/form-data"</span>
+  <span class="attr">formnovalidate</span>
+  <span class="attr">formtarget</span>=<span class="val">"_blank"</span>
+&gt;</span><span class="text-node">Save as Draft</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>form</code></td>
+            <td>Associates the input with a form by the form's <code>id</code> — even if the input is outside the form tags</td>
+          </tr>
+          <tr>
+            <td><code>formaction</code></td>
+            <td>Overrides the form's <code>action</code> URL for this specific submit button</td>
+          </tr>
+          <tr>
+            <td><code>formmethod</code></td>
+            <td>Overrides the form's <code>method</code> (GET or POST) for this button</td>
+          </tr>
+          <tr>
+            <td><code>formenctype</code></td>
+            <td>Overrides the form's <code>enctype</code> for this button</td>
+          </tr>
+          <tr>
+            <td><code>formnovalidate</code></td>
+            <td>Skips HTML5 validation when this button submits the form</td>
+          </tr>
+          <tr>
+            <td><code>formtarget</code></td>
+            <td>Overrides the form's <code>target</code> for this button</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-note">
+          <span class="icon">💡</span>
+          <div class="content">
+            <strong>Practical use case</strong>
+            <p>
+              <code>formaction</code> is useful when a form has two submit
+              buttons with different destinations — for example, "Save Draft"
+              and "Publish". Each button can point to a different server
+              endpoint without needing two separate forms.
+            </p>
+          </div>
+        </div>
+
         <h3>Textarea, Select, and Button</h3>
         <pre
           data-lang="HTML"
@@ -1662,6 +2385,131 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
   <span class="tag">&lt;label <span class="attr">for</span>=<span class="val">"fname"</span>&gt;</span><span class="text-node">First Name:</span><span class="tag">&lt;/label&gt;</span>
   <span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">id</span>=<span class="val">"fname"</span> <span class="attr">name</span>=<span class="val">"fname"</span>&gt;</span>
 <span class="tag">&lt;/fieldset&gt;</span></code></pre>
+
+        <!-- ─── Sub-topic: HTML Form Elements ─── -->
+        <div id="form-elements" class="subtopic-anchor"></div>
+        <h3>HTML Form Elements</h3>
+        <p>
+          HTML provides a rich set of form elements for collecting different
+          types of user input. Here is a complete reference:
+        </p>
+
+        <table class="ref-table">
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>&lt;input&gt;</code></td>
+            <td>The most versatile form element — its behaviour is controlled by the <code>type</code> attribute</td>
+          </tr>
+          <tr>
+            <td><code>&lt;label&gt;</code></td>
+            <td>Provides a clickable, accessible description for an input</td>
+          </tr>
+          <tr>
+            <td><code>&lt;textarea&gt;</code></td>
+            <td>Multi-line text input field</td>
+          </tr>
+          <tr>
+            <td><code>&lt;select&gt;</code></td>
+            <td>Dropdown list — contains <code>&lt;option&gt;</code> elements</td>
+          </tr>
+          <tr>
+            <td><code>&lt;option&gt;</code></td>
+            <td>A single choice inside a <code>&lt;select&gt;</code> or <code>&lt;datalist&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;optgroup&gt;</code></td>
+            <td>Groups related options inside a <code>&lt;select&gt;</code> with a label</td>
+          </tr>
+          <tr>
+            <td><code>&lt;button&gt;</code></td>
+            <td>Clickable button — types: <code>submit</code>, <code>reset</code>, <code>button</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;fieldset&gt;</code></td>
+            <td>Groups related form controls with a visible border</td>
+          </tr>
+          <tr>
+            <td><code>&lt;legend&gt;</code></td>
+            <td>Caption/title for a <code>&lt;fieldset&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;datalist&gt;</code></td>
+            <td>Provides autocomplete suggestions for an <code>&lt;input&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;output&gt;</code></td>
+            <td>Displays the result of a calculation or user action</td>
+          </tr>
+        </table>
+
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- optgroup example --&gt;</span>
+<span class="tag">&lt;select <span class="attr">name</span>=<span class="val">"city"</span>&gt;</span>
+  <span class="tag">&lt;optgroup <span class="attr">label</span>=<span class="val">"South West"</span>&gt;</span>
+    <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"lagos"</span>&gt;</span><span class="text-node">Lagos</span><span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"ibadan"</span>&gt;</span><span class="text-node">Ibadan</span><span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;/optgroup&gt;</span>
+  <span class="tag">&lt;optgroup <span class="attr">label</span>=<span class="val">"North"</span>&gt;</span>
+    <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"kano"</span>&gt;</span><span class="text-node">Kano</span><span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"abuja"</span>&gt;</span><span class="text-node">Abuja</span><span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;/optgroup&gt;</span>
+<span class="tag">&lt;/select&gt;</span>
+
+<span class="comment">&lt;!-- datalist for autocomplete suggestions --&gt;</span>
+<span class="tag">&lt;input <span class="attr">list</span>=<span class="val">"browsers"</span> <span class="attr">name</span>=<span class="val">"browser"</span> <span class="attr">placeholder</span>=<span class="val">"Choose a browser"</span>&gt;</span>
+<span class="tag">&lt;datalist <span class="attr">id</span>=<span class="val">"browsers"</span>&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"Chrome"</span>&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"Firefox"</span>&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"Safari"</span>&gt;</span>
+  <span class="tag">&lt;option <span class="attr">value</span>=<span class="val">"Edge"</span>&gt;</span>
+<span class="tag">&lt;/datalist&gt;</span></code></pre>
+
+        <h3>HTML5 Built-in Form Validation</h3>
+        <p>
+          HTML5 provides built-in validation attributes that work without any
+          JavaScript. The browser checks these rules before submitting the form.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- required: field must not be empty --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"text"</span> <span class="attr">name</span>=<span class="val">"username"</span> <span class="attr">required</span>&gt;</span>
+
+<span class="comment">&lt;!-- minlength / maxlength: character count limits --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"password"</span> <span class="attr">minlength</span>=<span class="val">"8"</span> <span class="attr">maxlength</span>=<span class="val">"32"</span> <span class="attr">required</span>&gt;</span>
+
+<span class="comment">&lt;!-- min / max: numeric range --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"number"</span> <span class="attr">min</span>=<span class="val">"1"</span> <span class="attr">max</span>=<span class="val">"100"</span>&gt;</span>
+
+<span class="comment">&lt;!-- pattern: regex pattern the value must match --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"tel"</span> <span class="attr">pattern</span>=<span class="val">"[0-9]{11}"</span> <span class="attr">placeholder</span>=<span class="val">"11-digit phone number"</span>&gt;</span>
+
+<span class="comment">&lt;!-- type="email" validates email format automatically --&gt;</span>
+<span class="tag">&lt;input <span class="attr">type</span>=<span class="val">"email"</span> <span class="attr">name</span>=<span class="val">"email"</span> <span class="attr">required</span>&gt;</span></code></pre>
+
+        <div class="info-box info-tip">
+          <span class="icon">✅</span>
+          <div class="content">
+            <strong>Always link labels to inputs</strong>
+            <p>
+              Use <code>&lt;label for="id"&gt;</code> matched to
+              <code>&lt;input id="id"&gt;</code>. This lets users click the
+              label text to focus the input — critical for keyboard and screen
+              reader users. Never skip labels.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box info-warn">
+          <span class="icon">⚠️</span>
+          <div class="content">
+            <strong>Client-side validation is not enough</strong>
+            <p>
+              HTML5 validation only runs in the browser. A user can bypass it
+              by disabling JavaScript or sending a direct HTTP request. Always
+              validate data on the <strong>server side</strong> as well.
+            </p>
+          </div>
+        </div>
 
         <hr class="section-divider" />
 
@@ -1733,6 +2581,94 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
             </li>
           </ol>
         </div>
+
+        <!-- ── Quiz 10 ── -->
+        <hr class="section-divider" />
+        <div class="quiz-block">
+          <div class="quiz-label">🧠 Quiz — Lesson 10: HTML Forms</div>
+          <p class="quiz-intro">Choose the correct answer for each question. Click <strong>Show Answer</strong> to reveal the result.</p>
+
+          <!-- Q1 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">1.</span> Which form <code>method</code> sends data <strong>appended to the URL</strong>?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="f10q1" value="a"> <span>POST</span></label>
+              <label class="q-option"><input type="radio" name="f10q1" value="b"> <span>GET</span></label>
+              <label class="q-option"><input type="radio" name="f10q1" value="c"> <span>PUT</span></label>
+              <label class="q-option"><input type="radio" name="f10q1" value="d"> <span>SEND</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'f10q1')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — GET</span>
+              <p><strong>Definition:</strong> The <code>GET</code> method appends form data to the URL as query parameters (e.g., <code>/search?q=html</code>). It is suitable for non-sensitive data like search queries. <code>POST</code> sends data in the request body, keeping it out of the URL — use it for passwords, personal data, and file uploads.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">2.</span> What is the correct way to link a <code>&lt;label&gt;</code> to an <code>&lt;input&gt;</code>?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="f10q2" value="a"> <span>Place the label after the input</span></label>
+              <label class="q-option"><input type="radio" name="f10q2" value="b"> <span>Match the label's <code>for</code> attribute to the input's <code>id</code></span></label>
+              <label class="q-option"><input type="radio" name="f10q2" value="c"> <span>Use the same <code>class</code> on both elements</span></label>
+              <label class="q-option"><input type="radio" name="f10q2" value="d"> <span>Wrap both in a <code>&lt;fieldset&gt;</code></span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'f10q2')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — Match the label's <code>for</code> to the input's <code>id</code></span>
+              <p><strong>Definition:</strong> <code>&lt;label for="email"&gt;</code> is linked to <code>&lt;input id="email"&gt;</code>. When linked, clicking the label text focuses the input — this is essential for keyboard navigation and screen reader users.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">3.</span> What is the key difference between <strong>radio buttons</strong> and <strong>checkboxes</strong>?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="f10q3" value="a"> <span>Radio buttons are round; checkboxes are square — no functional difference</span></label>
+              <label class="q-option"><input type="radio" name="f10q3" value="b"> <span>Radio buttons allow only one selection from a group; checkboxes allow multiple</span></label>
+              <label class="q-option"><input type="radio" name="f10q3" value="c"> <span>Checkboxes require the <code>required</code> attribute; radio buttons do not</span></label>
+              <label class="q-option"><input type="radio" name="f10q3" value="d"> <span>Radio buttons submit the form automatically when clicked</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'f10q3')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — Radio buttons allow only one selection; checkboxes allow multiple</span>
+              <p><strong>Definition:</strong> Radio buttons in the same group (same <code>name</code> attribute) are mutually exclusive — selecting one deselects the others. Checkboxes are independent — any number can be checked at the same time. Use radio buttons for "choose one" questions and checkboxes for "choose all that apply".</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">4.</span> Which input type is best for collecting a <strong>password</strong>?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="f10q4" value="a"> <span><code>type="text"</code></span></label>
+              <label class="q-option"><input type="radio" name="f10q4" value="b"> <span><code>type="hidden"</code></span></label>
+              <label class="q-option"><input type="radio" name="f10q4" value="c"> <span><code>type="password"</code></span></label>
+              <label class="q-option"><input type="radio" name="f10q4" value="d"> <span><code>type="secret"</code></span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'c', 'f10q4')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: C — <code>type="password"</code></span>
+              <p><strong>Definition:</strong> <code>&lt;input type="password"&gt;</code> masks the characters the user types, replacing them with dots or asterisks. This prevents shoulder-surfing. Note: the data is still sent as plain text unless the form uses HTTPS.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">5.</span> What does the <code>required</code> attribute do on a form input?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="f10q5" value="a"> <span>It makes the input read-only</span></label>
+              <label class="q-option"><input type="radio" name="f10q5" value="b"> <span>It pre-fills the input with a default value</span></label>
+              <label class="q-option"><input type="radio" name="f10q5" value="c"> <span>It prevents form submission if the field is empty, showing a browser validation message</span></label>
+              <label class="q-option"><input type="radio" name="f10q5" value="d"> <span>It sends the field value to the server twice for verification</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'c', 'f10q5')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: C — Prevents submission if the field is empty</span>
+              <p><strong>Definition:</strong> <code>required</code> is a boolean attribute that activates HTML5 built-in validation. If the user tries to submit the form while the field is empty, the browser blocks submission and displays a tooltip message. It works without any JavaScript.</p>
+            </div>
+          </div>
+
+        </div><!-- end quiz-block -->
       </section>
 
       <!-- ══════════════════════════════
@@ -1743,11 +2679,48 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
           <div class="lesson-num">Lesson 11</div>
           <div class="lesson-title-group">
             <h2>HTML Video & Audio</h2>
-            <span class="subtitle"
-              >Embedding media directly in the browser</span
-            >
+            <span class="subtitle">Embedding media directly in the browser</span>
           </div>
         </div>
+
+        <h3>What is HTML Media?</h3>
+        <p>
+          Before HTML5, embedding video or audio on a webpage required
+          third-party plugins like Adobe Flash. HTML5 introduced native
+          <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements
+          that work directly in the browser — no plugins needed.
+        </p>
+        <p>
+          You can either host media files yourself (self-hosted) or embed
+          content from platforms like YouTube using an
+          <code>&lt;iframe&gt;</code>.
+        </p>
+
+        <h4>Key Definitions</h4>
+        <dl class="def-list">
+          <dt><code>&lt;video&gt;</code></dt>
+          <dd>Embeds a video player in the page. Supports MP4, WebM, and Ogg formats. Requires a <code>src</code> attribute or nested <code>&lt;source&gt;</code> elements.</dd>
+          <dt><code>&lt;audio&gt;</code></dt>
+          <dd>Embeds an audio player. Supports MP3, WAV, and Ogg formats. Works the same way as <code>&lt;video&gt;</code> but without a visual frame.</dd>
+          <dt><code>&lt;source&gt;</code></dt>
+          <dd>A self-closing element nested inside <code>&lt;video&gt;</code> or <code>&lt;audio&gt;</code> to provide multiple file formats. The browser picks the first format it supports.</dd>
+          <dt><code>controls</code></dt>
+          <dd>A boolean attribute that shows the browser's built-in play/pause/volume/seek controls. Without it, the media plays with no user interface.</dd>
+          <dt><code>autoplay</code></dt>
+          <dd>Starts playing the media as soon as the page loads. Most browsers block autoplay with sound — combine with <code>muted</code> for it to work reliably.</dd>
+          <dt><code>muted</code></dt>
+          <dd>Starts the media with the volume set to zero. Required for autoplay to work in most browsers.</dd>
+          <dt><code>loop</code></dt>
+          <dd>Makes the media restart automatically when it reaches the end.</dd>
+          <dt><code>poster</code></dt>
+          <dd>An image URL shown as a thumbnail before the video starts playing. Only applies to <code>&lt;video&gt;</code>.</dd>
+          <dt><code>preload</code></dt>
+          <dd>Hints to the browser how much to load before the user presses play. Values: <code>none</code> (load nothing), <code>metadata</code> (load duration/dimensions only), <code>auto</code> (load the whole file).</dd>
+          <dt><code>&lt;iframe&gt;</code></dt>
+          <dd>An inline frame that embeds another webpage inside the current one. Used to embed YouTube, Vimeo, and Google Maps. The <code>src</code> attribute holds the embed URL.</dd>
+          <dt><code>&lt;track&gt;</code></dt>
+          <dd>Adds subtitles, captions, or chapter markers to a video. Uses WebVTT (.vtt) files. The <code>kind</code> attribute specifies the type (subtitles, captions, descriptions).</dd>
+        </dl>
 
         <h3>The &lt;video&gt; Element</h3>
         <p>
@@ -1809,6 +2782,87 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
   <span class="attr">allowfullscreen</span>
 &gt;&lt;/iframe&gt;</span></code></pre>
 
+        <!-- ─── Sub-topic: HTML Iframes ─── -->
+        <div id="iframes" class="subtopic-anchor"></div>
+        <h3>HTML Iframes</h3>
+        <p>
+          An <strong>iframe</strong> (inline frame) embeds another HTML page or
+          external resource directly inside your page. It creates a completely
+          separate browsing context within a rectangular area.
+        </p>
+        <pre data-lang="HTML"><code><span class="comment">&lt;!-- Basic iframe --&gt;</span>
+<span class="tag">&lt;iframe <span class="attr">src</span>=<span class="val">"https://example.com"</span> <span class="attr">width</span>=<span class="val">"600"</span> <span class="attr">height</span>=<span class="val">"400"</span>&gt;&lt;/iframe&gt;</span>
+
+<span class="comment">&lt;!-- Embed a YouTube video --&gt;</span>
+<span class="tag">&lt;iframe
+  <span class="attr">src</span>=<span class="val">"https://www.youtube.com/embed/dQw4w9WgXcQ"</span>
+  <span class="attr">width</span>=<span class="val">"560"</span>
+  <span class="attr">height</span>=<span class="val">"315"</span>
+  <span class="attr">title</span>=<span class="val">"YouTube video"</span>
+  <span class="attr">allowfullscreen</span>
+&gt;&lt;/iframe&gt;</span>
+
+<span class="comment">&lt;!-- Embed a Google Map --&gt;</span>
+<span class="tag">&lt;iframe
+  <span class="attr">src</span>=<span class="val">"https://maps.google.com/maps?q=Lagos&amp;output=embed"</span>
+  <span class="attr">width</span>=<span class="val">"600"</span>
+  <span class="attr">height</span>=<span class="val">"450"</span>
+  <span class="attr">style</span>=<span class="val">"border:0;"</span>
+  <span class="attr">loading</span>=<span class="val">"lazy"</span>
+&gt;&lt;/iframe&gt;</span>
+
+<span class="comment">&lt;!-- Remove the default border --&gt;</span>
+<span class="tag">&lt;iframe <span class="attr">src</span>=<span class="val">"page.html"</span> <span class="attr">frameborder</span>=<span class="val">"0"</span>&gt;&lt;/iframe&gt;</span></code></pre>
+
+        <table class="ref-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>src</code></td>
+            <td>URL of the page or resource to embed</td>
+          </tr>
+          <tr>
+            <td><code>width</code> / <code>height</code></td>
+            <td>Dimensions of the iframe in pixels (or CSS units)</td>
+          </tr>
+          <tr>
+            <td><code>title</code></td>
+            <td>Accessible description of the iframe content (required for screen readers)</td>
+          </tr>
+          <tr>
+            <td><code>allowfullscreen</code></td>
+            <td>Allows the embedded content to go fullscreen</td>
+          </tr>
+          <tr>
+            <td><code>loading="lazy"</code></td>
+            <td>Defers loading until the iframe is near the viewport (improves performance)</td>
+          </tr>
+          <tr>
+            <td><code>frameborder="0"</code></td>
+            <td>Removes the default border (deprecated — use CSS instead)</td>
+          </tr>
+          <tr>
+            <td><code>sandbox</code></td>
+            <td>Restricts what the embedded page can do (e.g., run scripts, submit forms)</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-warn">
+          <span class="icon">⚠️</span>
+          <div class="content">
+            <strong>Security — Use the sandbox attribute</strong>
+            <p>
+              When embedding untrusted third-party content, add the
+              <code>sandbox</code> attribute to restrict its capabilities.
+              Example: <code>sandbox="allow-scripts allow-same-origin"</code>.
+              Without it, the embedded page could run scripts or redirect your
+              users.
+            </p>
+          </div>
+        </div>
+
         <table class="ref-table">
           <tr>
             <th>Attribute</th>
@@ -1856,6 +2910,94 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
               you want a video to autoplay, you must also add
               <code>muted</code>. This is a user experience protection built
               into browsers.
+            </p>
+          </div>
+        </div>
+
+        <h3>Adding Subtitles with &lt;track&gt;</h3>
+        <p>
+          The <code>&lt;track&gt;</code> element adds subtitles, closed
+          captions, or chapter markers to a video. It references a
+          <strong>WebVTT</strong> (.vtt) file. This is important for
+          accessibility — users who are deaf or hard of hearing rely on
+          captions.
+        </p>
+        <pre data-lang="HTML"><code><span class="tag">&lt;video <span class="attr">controls</span> <span class="attr">width</span>=<span class="val">"640"</span>&gt;</span>
+  <span class="tag">&lt;source <span class="attr">src</span>=<span class="val">"lesson.mp4"</span> <span class="attr">type</span>=<span class="val">"video/mp4"</span>&gt;</span>
+
+  <span class="comment">&lt;!-- English subtitles --&gt;</span>
+  <span class="tag">&lt;track
+    <span class="attr">src</span>=<span class="val">"subtitles-en.vtt"</span>
+    <span class="attr">kind</span>=<span class="val">"subtitles"</span>
+    <span class="attr">srclang</span>=<span class="val">"en"</span>
+    <span class="attr">label</span>=<span class="val">"English"</span>
+    <span class="attr">default</span>
+  &gt;</span>
+
+  <span class="comment">&lt;!-- French subtitles --&gt;</span>
+  <span class="tag">&lt;track
+    <span class="attr">src</span>=<span class="val">"subtitles-fr.vtt"</span>
+    <span class="attr">kind</span>=<span class="val">"subtitles"</span>
+    <span class="attr">srclang</span>=<span class="val">"fr"</span>
+    <span class="attr">label</span>=<span class="val">"Français"</span>
+  &gt;</span>
+<span class="tag">&lt;/video&gt;</span></code></pre>
+
+        <h3>Supported Media Formats</h3>
+        <table class="ref-table">
+          <tr>
+            <th>Format</th>
+            <th>Type</th>
+            <th>MIME Type</th>
+            <th>Browser Support</th>
+          </tr>
+          <tr>
+            <td>MP4 (H.264)</td>
+            <td>Video</td>
+            <td><code>video/mp4</code></td>
+            <td>All modern browsers ✅</td>
+          </tr>
+          <tr>
+            <td>WebM (VP9)</td>
+            <td>Video</td>
+            <td><code>video/webm</code></td>
+            <td>Chrome, Firefox, Edge ✅</td>
+          </tr>
+          <tr>
+            <td>Ogg (Theora)</td>
+            <td>Video</td>
+            <td><code>video/ogg</code></td>
+            <td>Firefox, Chrome ✅</td>
+          </tr>
+          <tr>
+            <td>MP3</td>
+            <td>Audio</td>
+            <td><code>audio/mpeg</code></td>
+            <td>All modern browsers ✅</td>
+          </tr>
+          <tr>
+            <td>WAV</td>
+            <td>Audio</td>
+            <td><code>audio/wav</code></td>
+            <td>All modern browsers ✅</td>
+          </tr>
+          <tr>
+            <td>Ogg (Vorbis)</td>
+            <td>Audio</td>
+            <td><code>audio/ogg</code></td>
+            <td>Firefox, Chrome ✅</td>
+          </tr>
+        </table>
+
+        <div class="info-box info-tip">
+          <span class="icon">✅</span>
+          <div class="content">
+            <strong>Best practice: always provide MP4 + WebM</strong>
+            <p>
+              Use <code>&lt;source&gt;</code> to provide both MP4 and WebM
+              versions of your video. MP4 covers Safari and older browsers;
+              WebM is smaller and preferred by Chrome and Firefox. The browser
+              picks the first format it can play.
             </p>
           </div>
         </div>
@@ -1934,6 +3076,100 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
             </li>
           </ol>
         </div>
+
+        <!-- ── Quiz 11 ── -->
+        <hr class="section-divider" />
+        <div class="quiz-block">
+          <div class="quiz-label">🧠 Quiz — Lesson 11: HTML Video & Audio</div>
+          <p class="quiz-intro">Choose the correct answer for each question. Click <strong>Show Answer</strong> to reveal the result.</p>
+
+          <!-- Q1 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">1.</span> Which attribute shows the browser's built-in play/pause controls on a video?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="m11q1" value="a"> <span><code>autoplay</code></span></label>
+              <label class="q-option"><input type="radio" name="m11q1" value="b"> <span><code>controls</code></span></label>
+              <label class="q-option"><input type="radio" name="m11q1" value="c"> <span><code>src</code></span></label>
+              <label class="q-option"><input type="radio" name="m11q1" value="d"> <span><code>poster</code></span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'm11q1')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — <code>controls</code></span>
+              <p><strong>Definition:</strong> The <code>controls</code> boolean attribute tells the browser to display its native media player UI — including play/pause, a seek bar, volume control, and fullscreen button. Without it, the video plays (or doesn't) with no visible interface.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">2.</span> Why do we provide multiple <code>&lt;source&gt;</code> elements inside a <code>&lt;video&gt;</code> tag?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="m11q2" value="a"> <span>To play all videos at the same time</span></label>
+              <label class="q-option"><input type="radio" name="m11q2" value="b"> <span>To increase the video resolution</span></label>
+              <label class="q-option"><input type="radio" name="m11q2" value="c"> <span>To provide fallback formats so the browser can pick one it supports</span></label>
+              <label class="q-option"><input type="radio" name="m11q2" value="d"> <span>To add subtitles in multiple languages</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'c', 'm11q2')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: C — To provide fallback formats</span>
+              <p><strong>Definition:</strong> Not all browsers support the same video formats. By listing multiple <code>&lt;source&gt;</code> elements (e.g., MP4 and WebM), the browser tries each in order and plays the first one it can handle. This ensures cross-browser compatibility.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">3.</span> What does the <code>poster</code> attribute do on a <code>&lt;video&gt;</code> element?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="m11q3" value="a"> <span>It adds a watermark over the video while it plays</span></label>
+              <label class="q-option"><input type="radio" name="m11q3" value="b"> <span>It shows a thumbnail image before the video starts playing</span></label>
+              <label class="q-option"><input type="radio" name="m11q3" value="c"> <span>It sets the video to loop indefinitely</span></label>
+              <label class="q-option"><input type="radio" name="m11q3" value="d"> <span>It links to a promotional webpage for the video</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'm11q3')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — Shows a thumbnail image before the video plays</span>
+              <p><strong>Definition:</strong> <code>poster="image.jpg"</code> specifies an image to display in the video frame before the user presses play (or while the video is loading). It improves the visual appearance of the page and gives users a preview of the content.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">4.</span> Why must <code>autoplay</code> usually be combined with <code>muted</code>?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="m11q4" value="a"> <span>Because <code>autoplay</code> only works on audio files</span></label>
+              <label class="q-option"><input type="radio" name="m11q4" value="b"> <span>Because most browsers block autoplay with sound to protect users from unexpected noise</span></label>
+              <label class="q-option"><input type="radio" name="m11q4" value="c"> <span>Because <code>muted</code> increases the video loading speed</span></label>
+              <label class="q-option"><input type="radio" name="m11q4" value="d"> <span>Because <code>autoplay</code> is not a valid HTML5 attribute</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'm11q4')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — Browsers block autoplay with sound to protect users</span>
+              <p><strong>Definition:</strong> Modern browsers (Chrome, Firefox, Safari) enforce an autoplay policy that blocks media from playing with sound automatically, as unexpected audio is disruptive. Adding <code>muted</code> bypasses this restriction, allowing the video to autoplay silently — common for background hero videos.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="quiz-question">
+            <p class="q-text"><span class="q-num">5.</span> What is the difference between using a <code>&lt;video&gt;</code> tag and an <code>&lt;iframe&gt;</code> for embedding video?</p>
+            <div class="q-options">
+              <label class="q-option"><input type="radio" name="m11q5" value="a"> <span><code>&lt;video&gt;</code> is for audio only; <code>&lt;iframe&gt;</code> is for video</span></label>
+              <label class="q-option"><input type="radio" name="m11q5" value="b"> <span><code>&lt;video&gt;</code> plays self-hosted files; <code>&lt;iframe&gt;</code> embeds content from external platforms like YouTube</span></label>
+              <label class="q-option"><input type="radio" name="m11q5" value="c"> <span>They are identical — both play the same types of files</span></label>
+              <label class="q-option"><input type="radio" name="m11q5" value="d"> <span><code>&lt;iframe&gt;</code> requires a plugin; <code>&lt;video&gt;</code> does not</span></label>
+            </div>
+            <button class="show-answer-btn" onclick="revealAnswer(this, 'b', 'm11q5')">Show Answer</button>
+            <div class="answer-reveal" hidden>
+              <span class="answer-correct">✅ Correct Answer: B — <code>&lt;video&gt;</code> for self-hosted files; <code>&lt;iframe&gt;</code> for external platforms</span>
+              <p><strong>Definition:</strong> <code>&lt;video&gt;</code> plays media files (MP4, WebM) that you host on your own server. <code>&lt;iframe&gt;</code> embeds an entire external webpage — like a YouTube player — inside your page. YouTube videos cannot be played with <code>&lt;video&gt;</code> directly; you must use their embed URL in an <code>&lt;iframe&gt;</code>.</p>
+            </div>
+          </div>
+
+        </div><!-- end quiz-block -->
+
+        <div class="group-quiz-cta">
+          <a href="https://group-quiz.vercel.app/" target="_blank" rel="noopener noreferrer" class="group-quiz-btn">
+            🚀 Start Group Quiz
+          </a>
+        </div>
       </section>
     </main>
 
@@ -1946,6 +3182,36 @@ Second line within the same paragraph.</span><span class="tag">&lt;/p&gt;</span>
     </button>
 
     <script>
+      // ── Quiz: reveal answer ──
+      function revealAnswer(btn, correctValue, groupName) {
+        // Show the answer panel
+        const questionEl = btn.closest('.quiz-question');
+        const revealEl = questionEl.querySelector('.answer-reveal');
+        revealEl.removeAttribute('hidden');
+
+        // Disable the button
+        btn.disabled = true;
+        btn.textContent = 'Answer Shown';
+
+        // Highlight selected option
+        const selected = questionEl.querySelector('input[name="' + groupName + '"]:checked');
+        const allOptions = questionEl.querySelectorAll('.q-option');
+
+        allOptions.forEach(opt => {
+          const radio = opt.querySelector('input[type="radio"]');
+          radio.disabled = true;
+          if (radio.value === correctValue) {
+            opt.classList.add('selected-correct');
+          }
+        });
+
+        if (selected) {
+          if (selected.value !== correctValue) {
+            selected.closest('.q-option').classList.add('selected-wrong');
+          }
+        }
+      }
+
       // Progress bar
       const progress = document.getElementById("progress");
       window.addEventListener("scroll", () => {
